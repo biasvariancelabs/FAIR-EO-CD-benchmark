@@ -15,7 +15,7 @@
 | SYSU-CD   | [GitHub](https://github.com/liumency/SYSU-CD) | [Train](splits/sysu_cd_train.csv)| [Validation](splits/sysu_cd_val.csv) | [Test](splits/sysu_cd_test.csv)| [Python file](dataloaders/sysu_cd.py)|
 
 ## Performance
-Mean Intersection over Union (mIoU) for models trained from scratch.
+Mean Intersection over Union (mIoU) for models trained from scratch. The best performance is indicated in bold, and the second-best is underlined.
 | Dataset/Model | BIT | CGNet | ChangeFormerV6 | ChangeViT | CSSM | HRNet SiamConc | SiamCRNN | STANet | TinyCD | U-Net SiamConc |
 |---|---|---|---|---|---|---|---|---|---|---|
 | BANDON | 0.5015 | 0.4785 | **0.5661** | <ins>0.5545</ins> | 0.4787 | 0.5231 | 0.5511 | 0.4921 | 0.5306 | 0.4840 | 
@@ -29,7 +29,7 @@ Mean Intersection over Union (mIoU) for models trained from scratch.
 | Season-varying CDD | 0.8896 | 0.6578 | 0.8110 | **0.9141** | 0.7507 | 0.8584 | <ins>0.9133</ins> | 0.8296 | 0.8556 | 0.8887 | 
 | SYSU-CD | 0.7066 | **0.7646** | 0.7212 | <ins>0.7512</ins> | 0.6909 | 0.6654 | 0.7350 | 0.6709 | 0.6650 | 0.7090 | 
 
-Mean Intersection over Union (mIoU) for models pre-trained.
+Mean Intersection over Union (mIoU) for models with pre-trained backbones.
 | Dataset/Model | BIT | CGNet | ChangeFormerV6 | ChangeViT | CSSM | HRNet SiamConc | SiamCRNN | STANet | TinyCD | U-Net SiamConc |
 |---|---|---|---|---|---|---|---|---|---|---|
 | BANDON | 0.4780 | 0.4623 | 0.5644 | 0.5844 | 0.4787 | 0.5672 | <ins>0.5957</ins> | 0.4979 | 0.5568 | **0.6114** |
