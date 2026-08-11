@@ -21,6 +21,10 @@ Despite rapid advancements in machine learning for remote sensing, accurately ev
 
 Aligned with the core principles of FAIR (Findable, Accessible, Interoperable, and Reusable) and open science, our framework provides a unified pipeline for the Earth Observation community. It establishes rigorous testing protocols, standardized evaluation metrics, and reproducible baselines.
 
+The framework is integrated into the [AiTLAS](https://github.com/biasvariancelabs/aitlas) toolbox.
+
+## Citation
+
 ## Datasets
 | Dataset | Data source | Data splits | | | Dataloader |
 |---------|-------------|-------------|--|--|------|
