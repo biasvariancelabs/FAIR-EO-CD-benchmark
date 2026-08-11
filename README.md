@@ -23,7 +23,7 @@ Aligned with the core principles of FAIR (Findable, Accessible, Interoperable, a
 
 ## Datasets
 
-We do not host the datasets, but we provide links to data sources, custom data splits and data loaders used in this study.
+We do not host the datasets, but we provide links to original data sources, and our custom data splits and data loaders used in this study.
 
 | Dataset | Paper | Year | Data source | Data splits | Dataloader |
 | --- | --- | --- | --- | --- | --- |
