@@ -17,7 +17,7 @@
 ## Performance
 Mean Intersection over Union (mIoU) for models trained from scratch.
 | Dataset/Model | BIT | CGNet | ChangeFormerV6 | ChangeViT | CSSM | HRNet SiamConc | SiamCRNN | STANet | TinyCD | U-Net SiamConc |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|
 | BANDON | 0.5015 | 0.4785 | **0.5661** | <u>0.5545</u> | 0.4787 | 0.5231 | 0.5511 | 0.4921 | 0.5306 | 0.4840 | 
 | CLCD | 0.6920 | 0.6593 | 0.6569 | 0.6637 | 0.4596 | 0.6375 | <u>0.6950</u> | 0.6120 | 0.6612 | **0.7048** | 
 | DSIFN | 0.7711 | **0.8109** | 0.7453 | <u>0.7919</u> | 0.6829 | 0.6409 | 0.7863 | 0.7224 | 0.7133 | 0.7593 | 
