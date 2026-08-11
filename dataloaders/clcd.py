@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.patches import Patch
 
-from .semantic_segmentation import BaseDataset
+from ..base import BaseDataset
 from .schemas import FAIREOSchema
 from ..utils import image_loader
 
