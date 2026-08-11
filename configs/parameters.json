@@ -1,0 +1,11 @@
+{
+    "mlruns_directory": "/path/to/mlruns",
+    "epochs": 100,
+    "learning_rate": 1e-4,
+    "num_workers": 4,
+    "train_shuffle": true,
+    "validation_shuffle": false,
+    "test_shuffle": false,
+    "pretrained": [false, true],
+    "pretrained_name": ["scratch", "pretrained_imagenet1K"]
+}

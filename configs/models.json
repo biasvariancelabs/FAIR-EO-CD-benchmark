@@ -1,0 +1,14 @@
+{
+    "change_detection": {
+        "BIT": {},
+        "CGNet": {},
+        "ChangeFormerV6": {},
+        "CSSM": {},
+        "ChangeViT": {},
+        "HRNetChangeDetection": {},
+        "SiamCRNN": {},
+        "STANet": {},
+        "TinyCD": {},
+        "UnetChangeDetection": {}
+    }
+}

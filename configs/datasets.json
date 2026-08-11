@@ -1,0 +1,294 @@
+{
+    "change_detection": {
+        "levir_cd+": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/levir_cd+/",
+                "csv_file": "/path/to/data/FAIR_EO/levir_cd+/levir_cdplus_train.csv",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/levir_cd+/",
+                "csv_file": "/path/to/data/FAIR_EO/levir_cd+/levir_cdplus_val.csv",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/levir_cd+/",
+                "csv_file": "/path/to/data/FAIR_EO/levir_cd+/levir_cdplus_test.csv",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "levir_cdplus",
+            "dataloader_class": "LEVIRCDPlusDataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        },
+        "season_varying_cdd": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/season_varying_cdd/ChangeDetectionDataset/Real/subset/train/",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/season_varying_cdd/ChangeDetectionDataset/Real/subset/val/",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/season_varying_cdd/ChangeDetectionDataset/Real/subset/test/",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "season_varying_cdd",
+            "dataloader_class": "SeasonVaryingCDDDataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        
+        },
+        "dsifn": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/dsifn/",
+                "csv_file" : "/path/to/data/FAIR_EO/dsifn/dsifn_train.csv",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/dsifn/",
+                "csv_file" : "/path/to/data/FAIR_EO/dsifn/dsifn_val.csv",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/dsifn/",
+                "csv_file" : "/path/to/data/FAIR_EO/dsifn/dsifn_test.csv",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "dsifn",
+            "dataloader_class": "DSIFNDataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        },
+        "sysu_cd": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/sysu_cd/train/",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/sysu_cd/val/",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/sysu_cd/test/",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "sysu_cd",
+            "dataloader_class": "SYSUCDDataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        },
+        "msbc": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/msbc/",
+                "csv_file": "/path/to/data/FAIR_EO/msbc/msbc_train.csv",
+                "imagery": "s2",
+                "selection": "rgb",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/msbc/",
+                "csv_file": "/path/to/data/FAIR_EO/msbc/msbc_val.csv",
+                "imagery": "s2",
+                "selection": "rgb",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/msbc/",
+                "csv_file": "/path/to/data/FAIR_EO/msbc/msbc_test.csv",
+                "imagery": "s2",
+                "selection": "rgb",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "msbc",
+            "dataloader_class": "MSBCDataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        },
+        "msoscd": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/msoscd/",
+                "csv_file": "/path/to/data/FAIR_EO/msoscd/msoscd_train.csv",
+                "selection": "rgb",
+                "imagery": "s2",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/msoscd/",
+                "csv_file": "/path/to/data/FAIR_EO/msoscd/msoscd_val.csv",
+                "selection": "rgb",
+                "imagery": "s2",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/msoscd/",
+                "csv_file": "/path/to/data/FAIR_EO/msoscd/msoscd_test.csv",
+                "selection": "rgb",
+                "imagery": "s2",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "msoscd",
+            "dataloader_class": "MSOSCDDataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        },
+        "clcd": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/clcd/train/",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/clcd/val/",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/clcd/test/",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "clcd",
+            "dataloader_class": "CLCDDataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        },
+        "egy_bcd": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/egy_bcd/256/",
+                "csv_file": "/path/to/data/FAIR_EO/egy_bcd/256/egy_bcd_train.csv",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/egy_bcd/256/",
+                "csv_file": "/path/to/data/FAIR_EO/egy_bcd/256/egy_bcd_val.csv",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/egy_bcd/256/",
+                "csv_file": "/path/to/data/FAIR_EO/egy_bcd/256/egy_bcd_test.csv",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "egy_bcd",
+            "dataloader_class": "EGYBCDDataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        },
+        "bandon": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/bandon/",
+                "csv_file": "/path/to/data/FAIR_EO/bandon/bandon_train.csv",
+                "split": "new",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/bandon/",
+                "csv_file": "/path/to/data/FAIR_EO/bandon/bandon_val.csv",
+                "split": "new",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/bandon/",
+                "csv_file": "/path/to/data/FAIR_EO/bandon/bandon_test.csv",
+                "split": "new",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "bandon",
+            "dataloader_class": "BandonDataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        },
+        "ombria": {
+            "batch_size": 16,
+            "train_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/ombria/",
+                "csv_file": "/path/to/data/FAIR_EO/ombria/ombria_train.csv",
+                "imagery": "S2",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "validation_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/ombria/",
+                "csv_file": "/path/to/data/FAIR_EO/ombria/ombria_val.csv",
+                "imagery": "S2",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "test_config": {
+                "data_dir" : "/path/to/data/FAIR_EO/ombria/",
+                "csv_file": "/path/to/data/FAIR_EO/ombria/ombria_test.csv",
+                "imagery": "S2",
+                "transforms": ["aitlas.transforms.MinMaxNormTranspose","aitlas.transforms.ResizeToTensor"], 
+                "target_transforms": ["aitlas.transforms.Transpose","aitlas.transforms.ResizePerChannelToTensor"]
+            },
+            "dataloader": "ombria",
+            "dataloader_class": "OMBRIADataset",
+            "model_config": {
+                "num_classes": 2,
+                "threshold": 0.5,
+                "metrics": ["accuracy", "precision", "recall", "f1_score", "iou"]
+            }
+        }
+    }
+}
