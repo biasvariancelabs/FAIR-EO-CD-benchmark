@@ -23,10 +23,6 @@ Aligned with the core principles of FAIR (Findable, Accessible, Interoperable, a
 
 ## Datasets
 
-Ah, got it! My mistake. Since this is going in a GitHub README, those relative links are exactly what you need so they point directly to the files in your repo.
-
-Here is the table restored perfectly to the format you want:
-
 | Dataset | Paper | Year | Data source | Data splits | Dataloader |
 | --- | --- | --- | --- | --- | --- |
 | BANDON | [Pang et al.](%23) | 2023 | [GitHub](https://github.com/fitzpchao/BANDON) | [Train](splits/bandon_train.csv) • [Validation](splits/bandon_val.csv) • [Test](splits/bandon_test.csv) | [Python file](dataloaders/bandon.py) |
@@ -44,7 +40,7 @@ Here is the table restored perfectly to the format you want:
 
 Model checkpoints and TensorBoard logs are available on [HuggingFace](https://huggingface.co/bvlabs/FAIR-EO-CD-benchmark).
 
-| Model | Paper | Year | # Params (M) | GFLOPs | Model Checkpoints | TensorBoard Logs |
+| Model | Paper | Year | # Params (M) | GFLOPs | Model checkpoints | TensorBoard logs |
 | --- | --- | --- | --- | --- | --- | --- |
 | BIT | [Chen et al.](https://doi.org/10.1109/TGRS.2021.3095166) | 2021 | 3.50 | 10.88 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
 | CGNet | [Han et al.](https://doi.org/10.1109/JSTARS.2023.3310208) | 2023 | 33.68 | 87.55 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
