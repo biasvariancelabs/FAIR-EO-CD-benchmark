@@ -1,6 +1,25 @@
-# FAIR-EO-CD-benchmark
+<div align="center">
+<h2>Trustworthy benchmarking of methods for change detection in remote sensing</h2>
 
-This study presents a standardized benchmark for change detection in Earth Observation, developed as part of the OSCARS-funded [FAIR-EO](https://oscars-project.eu/projects/fair-eo-fair-open-and-ai-ready-earth-observation-resources) project. 
+[**Tadej Tomanič**](mailto:tadej@bvlabs.ai)<sup>1, 2</sup> · **Alice Baudhuin**<sup>1</sup> · **Jan Sotošek**<sup>1</sup> · **Jure Brence**<sup>1, 3</sup> · **Panče Panov**<sup>1, 3</sup> · **Nikola Simidjievski**<sup>1, 4</sup> · **Dragi Kocev**<sup>1, 3</sup>
+
+<br>
+<sup>1</sup>Bias Variance Labs, d.o.o.&emsp;&emsp;<sup>2</sup>University of Ljubljana, Faculty of Mathematics and Physics<br>
+<sup>3</sup>Department of Knowledge Technologies, Jožef Stefan Institute&emsp;&emsp;<sup>4</sup>Télécom Paris, Institut Polytechnique de Paris
+
+<br><br>
+<a href='https://huggingface.co/bvlabs/FAIR-EO-CD-benchmark'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FAIR--EO--CD--benchmark-yellow'></a>
+</div>
+
+## Summary
+
+Code and experiments for the paper, "Trustworthy benchmarking of methods for change detection in remote sensing", by Tadej Tomanič, Alice Baudhuin, Jan Sotošek, Jure Brence, Panče Panov, Nikola Simidjievski, and Dragi Kocev (currently under review / presented at [Venue Placeholder]).
+
+This study presents a standardized benchmark for change detection in Earth Observation, developed as part of the OSCARS-funded [FAIR-EO](https://oscars-project.eu/projects/fair-eo-fair-open-and-ai-ready-earth-observation-resources) project.
+
+Despite rapid advancements in machine learning for remote sensing, accurately evaluating and comparing change detection models remains a significant challenge. Variations in dataset preprocessing, data splits, and evaluation metrics often lead to inconsistent results, making it difficult to determine whether a new method genuinely outperforms existing ones. To address this, we introduce a comprehensive, transparent, and trustworthy benchmarking framework designed to eliminate these ambiguities.
+
+Aligned with the core principles of FAIR (Findable, Accessible, Interoperable, and Reusable) and open science, our framework provides a unified pipeline for the Earth Observation community. It establishes rigorous testing protocols, standardized evaluation metrics, and reproducible baselines.
 
 ## Datasets
 | Dataset | Data source | Data splits | | | Dataloader |
