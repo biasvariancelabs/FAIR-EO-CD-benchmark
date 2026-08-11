@@ -1,5 +1,7 @@
 # FAIR-EO-CD-benchmark
 
+This study presents a standardized benchmark for change detection in Earth Observation, developed as part of the OSCARS-funded [FAIR-EO](https://oscars-project.eu/projects/fair-eo-fair-open-and-ai-ready-earth-observation-resources) project. 
+
 ## Datasets
 | Dataset | Data source | Data splits | | | Dataloader |
 |---------|-------------|-------------|--|--|------|
