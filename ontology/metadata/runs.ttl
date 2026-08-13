@@ -35,7 +35,6 @@
     feo:runName "change_detection_msoscd_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785212411011"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/232c15d34b524a0ca1ba77b86d483d76> a it6:Run ;
@@ -69,7 +68,6 @@
     feo:runName "change_detection_msoscd_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786021018109"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/3a21a4beb7cd400f8c52208bca9cf73f> a it6:Run ;
@@ -103,7 +101,6 @@
     feo:runName "change_detection_msoscd_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785211262218"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/57d08251166d47dda3983e420307aced> a it6:Run ;
@@ -137,7 +134,6 @@
     feo:runName "change_detection_msoscd_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785200525230"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/6303526816824785a366b9a6fbb75cc9> a it6:Run ;
@@ -171,7 +167,6 @@
     feo:runName "change_detection_msoscd_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785205036665"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/7a693b5e44ab41bfb2b7b2e28da51228> a it6:Run ;
@@ -205,7 +200,6 @@
     feo:runName "change_detection_msoscd_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786015139207"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/98caa4d474384d41bc3d2ee190c53ed5> a it6:Run ;
@@ -238,7 +232,6 @@
     feo:runName "change_detection_msoscd_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786012156988"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/9ecca935c9f9472aafb59ccf5221c83c> a it6:Run ;
@@ -272,7 +265,6 @@
     feo:runName "change_detection_msoscd_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785210132217"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/9f7f2bd60ebb4c1b85c20216d7bf550a> a it6:Run ;
@@ -306,7 +298,6 @@
     feo:runName "change_detection_msoscd_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785209119731"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/ae685faf0e3b4faaad07aed990ef6a04> a it6:Run ;
@@ -340,7 +331,6 @@
     feo:runName "change_detection_msoscd_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786016373994"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/c286ce12094240469ecd0288fd9d19b4> a it6:Run ;
@@ -374,7 +364,6 @@
     feo:runName "change_detection_msoscd_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786017976540"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/cd359afda75e4bfe91854e82fb2be225> a it6:Run ;
@@ -408,7 +397,6 @@
     feo:runName "change_detection_msoscd_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785206121830"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/db908b141d264d81a77c07bbb7b67366> a it6:Run ;
@@ -442,7 +430,6 @@
     feo:runName "change_detection_msoscd_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786019818888"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/dfefae12d51b4899929be08e5e831417> a it6:Run ;
@@ -476,7 +463,6 @@
     feo:runName "change_detection_msoscd_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785203586912"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/e1767be9242a46e5b3cf7e8aa4bbaddd> a it6:Run ;
@@ -510,7 +496,6 @@
     feo:runName "change_detection_msoscd_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786018646115"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/ee07c202f9824b388dbde28ae2f09295> a it6:Run ;
@@ -544,7 +529,6 @@
     feo:runName "change_detection_msoscd_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786011231317"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/f8e49b6a2eb146c68ec99b0d4f4c131e> a it6:Run ;
@@ -578,7 +562,6 @@
     feo:runName "change_detection_msoscd_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785201346698"^^xsd:long .
 
 <http://example.com/mlflow/experiment/249939189667954470/run/feb820e484134e229ccec38c45a59ee0> a it6:Run ;
@@ -612,7 +595,6 @@
     feo:runName "change_detection_msoscd_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785207387418"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/11e5d6c84f6d4d85920b8fd9fc39a8b2> a it6:Run ;
@@ -646,7 +628,6 @@
     feo:runName "change_detection_levir_cd+_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784720561102"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/15bbe26807bf48de8454dbd9180d1e20> a it6:Run ;
@@ -680,7 +661,6 @@
     feo:runName "change_detection_levir_cd+_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785641571085"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/187d350ffa8143d9a3f2ad2e8cfe3a88> a it6:Run ;
@@ -714,7 +694,6 @@
     feo:runName "change_detection_levir_cd+_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784826206388"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/25e011e582744d08b3f125303c564d68> a it6:Run ;
@@ -748,7 +727,6 @@
     feo:runName "change_detection_levir_cd+_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785570718612"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/5eb3835ff6054b3887425e3ff98befcd> a it6:Run ;
@@ -782,7 +760,6 @@
     feo:runName "change_detection_levir_cd+_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784734548807"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/62eccdc2e1414d8ca2f6119e0f1050b2> a it6:Run ;
@@ -816,7 +793,6 @@
     feo:runName "change_detection_levir_cd+_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785695043806"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/64a06dd8105643d3985292e329bfe3ab> a it6:Run ;
@@ -850,7 +826,6 @@
     feo:runName "change_detection_levir_cd+_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785659684315"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/6a0b80d35f9c45cb8f2aaeee8a093600> a it6:Run ;
@@ -884,7 +859,6 @@
     feo:runName "change_detection_levir_cd+_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784768703131"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/762caed6b59c4074aa61d6efc88372c6> a it6:Run ;
@@ -918,7 +892,6 @@
     feo:runName "change_detection_levir_cd+_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785535071736"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/7b9c8eee08c244139bf8e67c87686434> a it6:Run ;
@@ -952,7 +925,6 @@
     feo:runName "change_detection_levir_cd+_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784755168540"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/93222bc7e92445e88ffabe0021f56963> a it6:Run ;
@@ -986,7 +958,6 @@
     feo:runName "change_detection_levir_cd+_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784819388605"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/a0438a70693f4c57b407c15d2c446257> a it6:Run ;
@@ -1020,7 +991,6 @@
     feo:runName "change_detection_levir_cd+_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784861507037"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/a8a8d5d65ae34430b9f46d545ec06fd8> a it6:Run ;
@@ -1054,7 +1024,6 @@
     feo:runName "change_detection_levir_cd+_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784743791599"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/d25a8daff1924a12926bd0529f5cd89c> a it6:Run ;
@@ -1087,7 +1056,6 @@
     feo:runName "change_detection_levir_cd+_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785549290146"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/e78be45847ff412dade97b3ad35faa15> a it6:Run ;
@@ -1121,7 +1089,6 @@
     feo:runName "change_detection_levir_cd+_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785607650640"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/ec9283331b184416862fdcef5a7db937> a it6:Run ;
@@ -1155,7 +1122,6 @@
     feo:runName "change_detection_levir_cd+_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784732686731"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/f52d4d50525d4c198244a6fed98bc073> a it6:Run ;
@@ -1189,7 +1155,6 @@
     feo:runName "change_detection_levir_cd+_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784795632827"^^xsd:long .
 
 <http://example.com/mlflow/experiment/356465803992768067/run/fdbb0ba2553f4d6a8b419756b5d022ea> a it6:Run ;
@@ -1223,7 +1188,6 @@
     feo:runName "change_detection_levir_cd+_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785579287159"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/0b0c151d688140fc88c6976ac60f1715> a it6:Run ;
@@ -1257,7 +1221,6 @@
     feo:runName "change_detection_ombria_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785534458077"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/12da141a8ada4c2785de93f6de1fcd92> a it6:Run ;
@@ -1291,7 +1254,6 @@
     feo:runName "change_detection_ombria_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786357892131"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/131c39e18b904b808bbaa8b362246b52> a it6:Run ;
@@ -1325,7 +1287,6 @@
     feo:runName "change_detection_ombria_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785531337775"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/2434fd8efa534462a5532c802e0fcf84> a it6:Run ;
@@ -1359,7 +1320,6 @@
     feo:runName "change_detection_ombria_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786358647788"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/2745ef42dd07480daa347045cd9c1932> a it6:Run ;
@@ -1393,7 +1353,6 @@
     feo:runName "change_detection_ombria_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786354863386"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/4ae2f6f779de47dfb8283f731799f1c7> a it6:Run ;
@@ -1427,7 +1386,6 @@
     feo:runName "change_detection_ombria_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786355400416"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/52b801d40cb74a98b3df2b2d563c85f8> a it6:Run ;
@@ -1461,7 +1419,6 @@
     feo:runName "change_detection_ombria_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785529846071"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/70f597030a234d1189c0665fa4b50086> a it6:Run ;
@@ -1495,7 +1452,6 @@
     feo:runName "change_detection_ombria_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786360340344"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/7585f43ee10f467c98c252cb71bb841b> a it6:Run ;
@@ -1529,7 +1485,6 @@
     feo:runName "change_detection_ombria_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786357357640"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/7fc8bd6fb5224a3e8ccf3cafbc377f4a> a it6:Run ;
@@ -1563,7 +1518,6 @@
     feo:runName "change_detection_ombria_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785532633570"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/9d8614e094c8407ea65e5bac474e25b8> a it6:Run ;
@@ -1597,7 +1551,6 @@
     feo:runName "change_detection_ombria_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785532287059"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/be7247016c554ae9a49b8dab527306fd> a it6:Run ;
@@ -1631,7 +1584,6 @@
     feo:runName "change_detection_ombria_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785530947213"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/c516ff76f2b540589e605886499077e9> a it6:Run ;
@@ -1665,7 +1617,6 @@
     feo:runName "change_detection_ombria_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785530218244"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/c5d57f91fc724e77ae4982b1e3aba832> a it6:Run ;
@@ -1699,7 +1650,6 @@
     feo:runName "change_detection_ombria_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785533156523"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/ca71fd101b844aaa8b1b64d2f38dac79> a it6:Run ;
@@ -1733,7 +1683,6 @@
     feo:runName "change_detection_ombria_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785531652173"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/d17c33bc444b40249427838ab97da0b5> a it6:Run ;
@@ -1767,7 +1716,6 @@
     feo:runName "change_detection_ombria_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785529140329"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/da6ca6936c5b422ca39bb467a6d7e21e> a it6:Run ;
@@ -1801,7 +1749,6 @@
     feo:runName "change_detection_ombria_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786358293551"^^xsd:long .
 
 <http://example.com/mlflow/experiment/428568496019216964/run/f4f5f76f2558437ca45cfbad65be4d64> a it6:Run ;
@@ -1835,7 +1782,6 @@
     feo:runName "change_detection_ombria_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786356920676"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/03281eb5555c4c6b85740c7c59fd4043> a it6:Run ;
@@ -1869,7 +1815,6 @@
     feo:runName "change_detection_sysu_cd_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785927666879"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/098ecbb8aae1452b9f9f6b62308441ce> a it6:Run ;
@@ -1903,7 +1848,6 @@
     feo:runName "change_detection_sysu_cd_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785119372478"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/11bff7df8a0240dd96fb58b183d9beef> a it6:Run ;
@@ -1937,7 +1881,6 @@
     feo:runName "change_detection_sysu_cd_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785974085205"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/1a170bde94304b43b5f656a80d357ab2> a it6:Run ;
@@ -1971,7 +1914,6 @@
     feo:runName "change_detection_sysu_cd_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785150326265"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/27738d25cf164118aeba848cda47b77a> a it6:Run ;
@@ -2005,7 +1947,6 @@
     feo:runName "change_detection_sysu_cd_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785949710770"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/2858140b88f74b6896137f1435c54322> a it6:Run ;
@@ -2039,7 +1980,6 @@
     feo:runName "change_detection_sysu_cd_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785956320272"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/604d2d30bdc84d44af653399fe15e782> a it6:Run ;
@@ -2073,7 +2013,6 @@
     feo:runName "change_detection_sysu_cd_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785107266019"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/76a8c9336d784b698abe8dc282232228> a it6:Run ;
@@ -2107,7 +2046,6 @@
     feo:runName "change_detection_sysu_cd_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785135542514"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/7826ec714c3841a0a0cc33e0b6f60be8> a it6:Run ;
@@ -2141,7 +2079,6 @@
     feo:runName "change_detection_sysu_cd_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785128306966"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/8bb9a96c7d9c4daea7a2dcaf01ad5345> a it6:Run ;
@@ -2175,7 +2112,6 @@
     feo:runName "change_detection_sysu_cd_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785180627301"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/b66f0dc48ac2454cb2ea2845b052c686> a it6:Run ;
@@ -2209,7 +2145,6 @@
     feo:runName "change_detection_sysu_cd_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785995532240"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/b86ade6fc572467c8b53f79328e0e920> a it6:Run ;
@@ -2243,7 +2178,6 @@
     feo:runName "change_detection_sysu_cd_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785161059865"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/b887b684d5044f5eb7b6e9053cd81685> a it6:Run ;
@@ -2277,7 +2211,6 @@
     feo:runName "change_detection_sysu_cd_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785967814178"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/c0912f84bb9c498d8c0f0bb908acaffc> a it6:Run ;
@@ -2311,7 +2244,6 @@
     feo:runName "change_detection_sysu_cd_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785169677806"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/d4b852f6380347409ade3cde17eb3525> a it6:Run ;
@@ -2345,7 +2277,6 @@
     feo:runName "change_detection_sysu_cd_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785962141574"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/da59f73eb7ff4a57aef6e416f2728a34> a it6:Run ;
@@ -2379,7 +2310,6 @@
     feo:runName "change_detection_sysu_cd_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785143057526"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/f14b5dd7cb0040a6a411eea0d6ba4d87> a it6:Run ;
@@ -2413,7 +2343,6 @@
     feo:runName "change_detection_sysu_cd_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785099604404"^^xsd:long .
 
 <http://example.com/mlflow/experiment/444431406836407170/run/f8293cfcb454473bb7d206f9c624101c> a it6:Run ;
@@ -2446,7 +2375,6 @@
     feo:runName "change_detection_sysu_cd_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785932990450"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/000fa5bf32714aab9b880f6759b03b84> a it6:Run ;
@@ -2480,7 +2408,6 @@
     feo:runName "change_detection_season_varying_cdd_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785824797479"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/0dd92ec902644c958c741cb3dd6d3648> a it6:Run ;
@@ -2514,7 +2441,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784969215206"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/1f0f6a7265fb4198b23df7c6275ef9ef> a it6:Run ;
@@ -2547,7 +2473,6 @@
     feo:runName "change_detection_season_varying_cdd_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785730199329"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/6090dac1ef24489494c86bb7a08e94fa> a it6:Run ;
@@ -2581,7 +2506,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784883847656"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/681ae95a91ce4a68b4b91cd523e87278> a it6:Run ;
@@ -2615,7 +2539,6 @@
     feo:runName "change_detection_season_varying_cdd_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785796901342"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/724040ff257c475686e3824893dd3aab> a it6:Run ;
@@ -2648,7 +2571,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784903693099"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/737ea09fcd8d4138aff49dca3acc0692> a it6:Run ;
@@ -2682,7 +2604,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784904137537"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/944c072df70846a4ad646c421f7b95f1> a it6:Run ;
@@ -2716,7 +2637,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784948902506"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/9e79b2fe28c84a24a7aa6f4f0fdec061> a it6:Run ;
@@ -2750,7 +2670,6 @@
     feo:runName "change_detection_season_varying_cdd_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785778965741"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/a5f738dcca9c40bda5550770a320296b> a it6:Run ;
@@ -2784,7 +2703,6 @@
     feo:runName "change_detection_season_varying_cdd_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785877193712"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/a936e312916d437ba52049b9112191ba> a it6:Run ;
@@ -2818,7 +2736,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785010667937"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/c07694e2c1d84b469bb0ab30a14ff8aa> a it6:Run ;
@@ -2852,7 +2769,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784909483363"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/c23aaa9bc8f14bf791a4055acad57575> a it6:Run ;
@@ -2886,7 +2802,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785046673038"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/e3482ad002c34aa9b8ef394611890824> a it6:Run ;
@@ -2920,7 +2835,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784922880785"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/e42c5f1f25564c80bd4076c1b72f8b2a> a it6:Run ;
@@ -2954,7 +2868,6 @@
     feo:runName "change_detection_season_varying_cdd_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785811036326"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/ecc704fd0caa4ba6bf2656e18308fca9> a it6:Run ;
@@ -2988,7 +2901,6 @@
     feo:runName "change_detection_season_varying_cdd_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785718496004"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/f01ef2c00a5c465e8f18f51b70bd097e> a it6:Run ;
@@ -3022,7 +2934,6 @@
     feo:runName "change_detection_season_varying_cdd_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785841156168"^^xsd:long .
 
 <http://example.com/mlflow/experiment/487131236417932510/run/fb8304ce6b284919a1483a80f37dab1f> a it6:Run ;
@@ -3056,7 +2967,6 @@
     feo:runName "change_detection_season_varying_cdd_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1784994890222"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/05c6182734194e00b923240bafa690a8> a it6:Run ;
@@ -3090,7 +3000,6 @@
     feo:runName "change_detection_bandon_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785475517772"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/0eed9d78010641f4af1a497276bfca89> a it6:Run ;
@@ -3124,7 +3033,6 @@
     feo:runName "change_detection_bandon_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786249884265"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/20e05e1b8bb44d3893343d077e4ac51f> a it6:Run ;
@@ -3158,7 +3066,6 @@
     feo:runName "change_detection_bandon_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785458784980"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/20e5ebc8e68f44668085f99814bc9b89> a it6:Run ;
@@ -3192,7 +3099,6 @@
     feo:runName "change_detection_bandon_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786229974680"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/2222927c66b04221a0cfd0cc15c28dbc> a it6:Run ;
@@ -3226,7 +3132,6 @@
     feo:runName "change_detection_bandon_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785304098523"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/4659cd7cc32e46ddaa4339686bfc735c> a it6:Run ;
@@ -3260,7 +3165,6 @@
     feo:runName "change_detection_bandon_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786158512949"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/4a7756237b2a43e6aed58120b56cfb51> a it6:Run ;
@@ -3294,7 +3198,6 @@
     feo:runName "change_detection_bandon_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786328811482"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/63083fea4df64afdbe2dd882420e3594> a it6:Run ;
@@ -3328,7 +3231,6 @@
     feo:runName "change_detection_bandon_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785276361284"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/78dcd6f3316041f4a3e76a12d5f1e9b9> a it6:Run ;
@@ -3362,7 +3264,6 @@
     feo:runName "change_detection_bandon_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786076639900"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/7c172f0db4f74154aaa43143157b1d08> a it6:Run ;
@@ -3396,7 +3297,6 @@
     feo:runName "change_detection_bandon_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785368253151"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/9a802340ceca4c66adbaaf1b5ed34e1b> a it6:Run ;
@@ -3430,7 +3330,6 @@
     feo:runName "change_detection_bandon_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785521083980"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/a0257813d11f42eba236495e73a90ddc> a it6:Run ;
@@ -3464,7 +3363,6 @@
     feo:runName "change_detection_bandon_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786142515695"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/b55694f9fd0d472ba4782cbb7bea1187> a it6:Run ;
@@ -3497,7 +3395,6 @@
     feo:runName "change_detection_bandon_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786098898884"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/bad386558ddf41eaa9490ee6a27f5492> a it6:Run ;
@@ -3531,7 +3428,6 @@
     feo:runName "change_detection_bandon_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786191958296"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/bc1cb6b374b94a0088c6d6f53452f1f5> a it6:Run ;
@@ -3565,7 +3461,6 @@
     feo:runName "change_detection_bandon_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785416588121"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/c1fbc445001c4d49b2da75194150b1ad> a it6:Run ;
@@ -3599,7 +3494,6 @@
     feo:runName "change_detection_bandon_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785306618577"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/cf70735e97cc4b6fb40566c4cb9454ab> a it6:Run ;
@@ -3633,7 +3527,6 @@
     feo:runName "change_detection_bandon_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785326866389"^^xsd:long .
 
 <http://example.com/mlflow/experiment/597925609067587946/run/dcd7d77e288c4a0b856ec425948832eb> a it6:Run ;
@@ -3667,7 +3560,6 @@
     feo:runName "change_detection_bandon_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785350747101"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/00eae823dbe84ad0af7fec62e6d6e68f> a it6:Run ;
@@ -3701,7 +3593,6 @@
     feo:runName "change_detection_dsifn_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785075849013"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/0c374068f6424a3fb64213d6daaeb4bf> a it6:Run ;
@@ -3735,7 +3626,6 @@
     feo:runName "change_detection_dsifn_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785909606254"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/2a680b3eba894f56b36fd3879908880e> a it6:Run ;
@@ -3769,7 +3659,6 @@
     feo:runName "change_detection_dsifn_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785073824925"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/2fc04041a04644f1a34a9a4e72d30f51> a it6:Run ;
@@ -3803,7 +3692,6 @@
     feo:runName "change_detection_dsifn_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785065515147"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/3af1da36bf674e21adba67f76fc7e078> a it6:Run ;
@@ -3837,7 +3725,6 @@
     feo:runName "change_detection_dsifn_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785081843035"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/466d50d2ed04481aa1518a604a81a34d> a it6:Run ;
@@ -3871,7 +3758,6 @@
     feo:runName "change_detection_dsifn_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785925316312"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/4c2b4847e5c541cab79f814dc0b9e772> a it6:Run ;
@@ -3905,7 +3791,6 @@
     feo:runName "change_detection_dsifn_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785904441332"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/4f79a44b0290458abd1050dbb2aa614d> a it6:Run ;
@@ -3939,7 +3824,6 @@
     feo:runName "change_detection_dsifn_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785089467815"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/6133318c4fcf455c8941179af3bdb3a5> a it6:Run ;
@@ -3973,7 +3857,6 @@
     feo:runName "change_detection_dsifn_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785895501906"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/731a24813399467cb7ea40998383433f> a it6:Run ;
@@ -4007,7 +3890,6 @@
     feo:runName "change_detection_dsifn_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785911799041"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/7347c082aa894b8eb97dfb77aebd1337> a it6:Run ;
@@ -4041,7 +3923,6 @@
     feo:runName "change_detection_dsifn_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785914422069"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/828d87f091ae4c8b927743c232f4d2f1> a it6:Run ;
@@ -4075,7 +3956,6 @@
     feo:runName "change_detection_dsifn_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785906761326"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/992f208d1bea4a2c884a547451f38283> a it6:Run ;
@@ -4109,7 +3989,6 @@
     feo:runName "change_detection_dsifn_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785079400034"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/d185445541f140ad94584b55b2eb34d8> a it6:Run ;
@@ -4143,7 +4022,6 @@
     feo:runName "change_detection_dsifn_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785897275717"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/e51604ae66ed49a685072c1334ff1e94> a it6:Run ;
@@ -4177,7 +4055,6 @@
     feo:runName "change_detection_dsifn_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785086328603"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/e878744fb3584e72a3b5b4ff06fefa34> a it6:Run ;
@@ -4211,7 +4088,6 @@
     feo:runName "change_detection_dsifn_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785095453353"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/fe9d8340a6ac49108ce0235c9a36ec64> a it6:Run ;
@@ -4245,7 +4121,6 @@
     feo:runName "change_detection_dsifn_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785070900388"^^xsd:long .
 
 <http://example.com/mlflow/experiment/665697534035056088/run/fffae08a1e4d4b63944459ade40fa704> a it6:Run ;
@@ -4279,7 +4154,6 @@
     feo:runName "change_detection_dsifn_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785061760766"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/172dadd106cd4acc9f67fac1e0b3ae7d> a it6:Run ;
@@ -4313,7 +4187,6 @@
     feo:runName "change_detection_egy_bcd_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785234386547"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/25927bd1f2f84cb88707a8abdac28bfa> a it6:Run ;
@@ -4347,7 +4220,6 @@
     feo:runName "change_detection_egy_bcd_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786042873401"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/29378e2085b747e5961517981f1fb398> a it6:Run ;
@@ -4381,7 +4253,6 @@
     feo:runName "change_detection_egy_bcd_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785266831924"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/344c033be53b48fbbacca7e6285ac281> a it6:Run ;
@@ -4415,7 +4286,6 @@
     feo:runName "change_detection_egy_bcd_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786058498814"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/40d8cd9ea06b43bcb5da53e82ce0697b> a it6:Run ;
@@ -4449,7 +4319,6 @@
     feo:runName "change_detection_egy_bcd_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785238284104"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/4b66c41046a846f8b1da430cce0ab9da> a it6:Run ;
@@ -4483,7 +4352,6 @@
     feo:runName "change_detection_egy_bcd_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785244729234"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/4d03fb826bd54df8b1f41dcea4504363> a it6:Run ;
@@ -4517,7 +4385,6 @@
     feo:runName "change_detection_egy_bcd_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785259915012"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/580e16e8c1b549d7ba7ffdec228b9265> a it6:Run ;
@@ -4551,7 +4418,6 @@
     feo:runName "change_detection_egy_bcd_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786073838325"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/5c79a26823db47ffb67869b1a71b18a0> a it6:Run ;
@@ -4585,7 +4451,6 @@
     feo:runName "change_detection_egy_bcd_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786061664774"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/76154bd0f7924130b9c752035411ef25> a it6:Run ;
@@ -4619,7 +4484,6 @@
     feo:runName "change_detection_egy_bcd_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785248305155"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/796b65c87fc44ae799dca3889119f2da> a it6:Run ;
@@ -4652,7 +4516,6 @@
     feo:runName "change_detection_egy_bcd_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786045409449"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/84f8772600bd43d2af9c1a0b4c7405db> a it6:Run ;
@@ -4686,7 +4549,6 @@
     feo:runName "change_detection_egy_bcd_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786064204580"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/98fde002164e47c2b3d46de9be5afe3d> a it6:Run ;
@@ -4720,7 +4582,6 @@
     feo:runName "change_detection_egy_bcd_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785251149133"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/a3c0670a20ca44ac8a9a3f436d12cc63> a it6:Run ;
@@ -4754,7 +4615,6 @@
     feo:runName "change_detection_egy_bcd_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785263587807"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/a8756d280ce9453cafaccfae511109da> a it6:Run ;
@@ -4788,7 +4648,6 @@
     feo:runName "change_detection_egy_bcd_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786052161280"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/d590cd53d1d644f0b46779635fbdeaa1> a it6:Run ;
@@ -4822,7 +4681,6 @@
     feo:runName "change_detection_egy_bcd_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785272720739"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/dc78b859b67044a0aed8e832442b682a> a it6:Run ;
@@ -4856,7 +4714,6 @@
     feo:runName "change_detection_egy_bcd_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785255390892"^^xsd:long .
 
 <http://example.com/mlflow/experiment/864020294674887661/run/ef4e23fb19fa40cdb633e37ab0ddc7e0> a it6:Run ;
@@ -4890,7 +4747,6 @@
     feo:runName "change_detection_egy_bcd_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786054383471"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/09ea5bd436914e48aa51383cccd6f149> a it6:Run ;
@@ -4924,7 +4780,6 @@
     feo:runName "change_detection_clcd_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786026863966"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/2379e2fb6b9d4d32ba7c475130aad8a1> a it6:Run ;
@@ -4958,7 +4813,6 @@
     feo:runName "change_detection_clcd_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786021709787"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/25bcd039693148af8026041113cb03b8> a it6:Run ;
@@ -4992,7 +4846,6 @@
     feo:runName "change_detection_clcd_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785225761311"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/2b08dadac365438aabe1cf3577c98a4e> a it6:Run ;
@@ -5026,7 +4879,6 @@
     feo:runName "change_detection_clcd_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785220282639"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/389ac7a766b04e3aab385edcf5fb3616> a it6:Run ;
@@ -5060,7 +4912,6 @@
     feo:runName "change_detection_clcd_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786033928843"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/419dd15fb0c142889a5c346b1ef7b2d9> a it6:Run ;
@@ -5093,7 +4944,6 @@
     feo:runName "change_detection_clcd_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786023560972"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/45ffcf91731b486eb9d1af4866fc5c52> a it6:Run ;
@@ -5127,7 +4977,6 @@
     feo:runName "change_detection_clcd_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785217609795"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/4c85ed9986574cacb0d0de712e45976d> a it6:Run ;
@@ -5161,7 +5010,6 @@
     feo:runName "change_detection_clcd_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785218936165"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/5affbb82ddcb4c70b0cc55852fca4633> a it6:Run ;
@@ -5195,7 +5043,6 @@
     feo:runName "change_detection_clcd_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786030502017"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/66637620d8594d37813271a059aff20b> a it6:Run ;
@@ -5229,7 +5076,6 @@
     feo:runName "change_detection_clcd_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785227137015"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/668d1fd0a8264b19af442cf69d84cb66> a it6:Run ;
@@ -5263,7 +5109,6 @@
     feo:runName "change_detection_clcd_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785216152870"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/7bbc833e39e048a1ba1a6cef32217e03> a it6:Run ;
@@ -5297,7 +5142,6 @@
     feo:runName "change_detection_clcd_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786039498277"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/7d73439b5474405eb55c4da2007d9c5a> a it6:Run ;
@@ -5331,7 +5175,6 @@
     feo:runName "change_detection_clcd_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786027770468"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/9834763b55e6429dbe190b25f604df47> a it6:Run ;
@@ -5365,7 +5208,6 @@
     feo:runName "change_detection_clcd_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785223013274"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/a63b3a04e1d144f18246eed7a7a36852> a it6:Run ;
@@ -5399,7 +5241,6 @@
     feo:runName "change_detection_clcd_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785213163952"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/bca2898e404b41d69289c230eb4e2b8f> a it6:Run ;
@@ -5433,7 +5274,6 @@
     feo:runName "change_detection_clcd_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786032968499"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/da27f438c7854b06ad0a4612901248dd> a it6:Run ;
@@ -5467,7 +5307,6 @@
     feo:runName "change_detection_clcd_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785231414488"^^xsd:long .
 
 <http://example.com/mlflow/experiment/894836411174220328/run/e1e5fae8b34f40989b25352ed6d68e62> a it6:Run ;
@@ -5501,7 +5340,6 @@
     feo:runName "change_detection_clcd_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785215358688"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/00ee53b2fe3e4fa29716cf526635c3d4> a it6:Run ;
@@ -5535,7 +5373,6 @@
     feo:runName "change_detection_msbc_pretrained_imagenet1K_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786008119741"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/05e8f2a48de74028983b2f9bb8933de6> a it6:Run ;
@@ -5569,7 +5406,6 @@
     feo:runName "change_detection_msbc_pretrained_imagenet1K_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786001281875"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/21a845a83aed4bf4aead2da618b8f9ed> a it6:Run ;
@@ -5603,7 +5439,6 @@
     feo:runName "change_detection_msbc_pretrained_imagenet1K_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786007148032"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/24e6773c1ee64ad399f2877c8e4ee456> a it6:Run ;
@@ -5637,7 +5472,6 @@
     feo:runName "change_detection_msbc_pretrained_imagenet1K_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786004922272"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/257944ff1c63449d917bf05de79ffc84> a it6:Run ;
@@ -5671,7 +5505,6 @@
     feo:runName "change_detection_msbc_scratch_BIT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785186837900"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/42804ceaefba40bc874af3467c755c7f> a it6:Run ;
@@ -5704,7 +5537,6 @@
     feo:runName "change_detection_msbc_pretrained_imagenet1K_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786002035891"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/52b6f5c7fc9d467e9f83c31b0494f609> a it6:Run ;
@@ -5738,7 +5570,6 @@
     feo:runName "change_detection_msbc_scratch_TinyCD" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785197149250"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/57eff75c45af42d4b5b1d68ca72e9987> a it6:Run ;
@@ -5772,7 +5603,6 @@
     feo:runName "change_detection_msbc_scratch_CGNet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785187771574"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/5e009500fa81488d8b858d54e939762c> a it6:Run ;
@@ -5806,7 +5636,6 @@
     feo:runName "change_detection_msbc_scratch_CSSM" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785190545728"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/783f6cc6be5b4a91a8ce00f68dd45418> a it6:Run ;
@@ -5840,7 +5669,6 @@
     feo:runName "change_detection_msbc_scratch_HRNetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785192694096"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/800a2093426d418882a538f83853e174> a it6:Run ;
@@ -5874,7 +5702,6 @@
     feo:runName "change_detection_msbc_pretrained_imagenet1K_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786006414815"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/803b40ff769347ebab99b8647ede6faa> a it6:Run ;
@@ -5908,7 +5735,6 @@
     feo:runName "change_detection_msbc_pretrained_imagenet1K_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786010566186"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/8df1c14cce234960ba47c1cadd2968be> a it6:Run ;
@@ -5942,7 +5768,6 @@
     feo:runName "change_detection_msbc_scratch_UnetChangeDetection" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785199363229"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/9453849b949746f78880f8536348787b> a it6:Run ;
@@ -5976,7 +5801,6 @@
     feo:runName "change_detection_msbc_pretrained_imagenet1K_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1786004156378"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/9f9dbb49556f4da7a3f6a78603dc281a> a it6:Run ;
@@ -6010,7 +5834,6 @@
     feo:runName "change_detection_msbc_scratch_SiamCRNN" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785194961092"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/a3a83cf8875049bc8924e843b2f53372> a it6:Run ;
@@ -6044,7 +5867,6 @@
     feo:runName "change_detection_msbc_scratch_ChangeViT" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785191516951"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/a9c1fcf9244c4232959b218e49791403> a it6:Run ;
@@ -6078,7 +5900,6 @@
     feo:runName "change_detection_msbc_scratch_STANet" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785196122886"^^xsd:long .
 
 <http://example.com/mlflow/experiment/933845116341269939/run/afd091de1964401ba8c5ae2e0c5c8fd0> a it6:Run ;
@@ -6112,7 +5933,6 @@
     feo:runName "change_detection_msbc_scratch_ChangeFormerV6" ;
     feo:runStatus "3" ;
     feo:sourceGitCommit "403ec7684ecbc98029734a667f3c440475f6c4ea" ;
-    feo:sourceName "/home/dragik/jan/aitlas_jan/mlflow_run.py" ;
     feo:startTime "1785189355238"^^xsd:long .
 
 <http://w3id.org/fair-eo/id/eval/000fa5bf32714aab9b880f6759b03b84/Accuracy_test> a feo:EvaluationResult ;
