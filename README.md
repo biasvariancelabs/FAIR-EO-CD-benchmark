@@ -60,7 +60,7 @@ Model checkpoints and TensorBoard logs are available on [HuggingFace](https://hu
 Mean Intersection over Union (mIoU) for models trained from scratch. The best performance is indicated in bold, and the second-best is underlined.
 
 | Dataset/Model | BIT | CGNet | ChangeFormerV6 | ChangeViT | CSSM | HRNet SiamConc | SiamCRNN | STANet | TinyCD | U-Net SiamConc | Average |
-|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|---|
 | **BANDON** | 0.5015 | 0.4785 | **0.5661** | <ins>0.5545</ins> | 0.4787 | 0.5231 | 0.5511 | 0.4921 | 0.5306 | 0.4840 | 0.5160 |
 | **CLCD** | 0.6920 | 0.6593 | 0.6569 | 0.6637 | 0.4596 | 0.6375 | <ins>0.6950</ins> | 0.6120 | 0.6612 | **0.7048** | 0.6442 |
 | **DSIFN** | 0.7711 | **0.8109** | 0.7453 | <ins>0.7919</ins> | 0.6829 | 0.6409 | 0.7863 | 0.7224 | 0.7133 | 0.7593 | 0.7424 |
@@ -77,7 +77,7 @@ Mean Intersection over Union (mIoU) for models trained from scratch. The best pe
 Mean Intersection over Union (mIoU) for models with pre-trained backbones.
 
 | Dataset/Model | BIT | CGNet | ChangeViT | HRNet SiamConc | SiamCRNN | STANet | TinyCD | U-Net SiamConc | Average |
-|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|
 | **BANDON** | 0.4780 | 0.4623 | 0.5844 | 0.5672 | <ins>0.5957</ins> | 0.4979 | 0.5568 | **0.6114** | 0.5442 |
 | **CLCD** | 0.7104 | 0.5061 | 0.7101 | <ins>0.7182</ins> | 0.7088 | 0.5198 | 0.6821 | **0.7521** | 0.6634 |
 | **DSIFN** | 0.7551 | 0.8396 | 0.8282 | 0.8044 | <ins>0.8459</ins> | 0.8075 | 0.7819 | **0.8569** | 0.8149 |
