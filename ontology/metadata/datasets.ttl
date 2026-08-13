@@ -1,0 +1,1557 @@
+@prefix : <http://w3id.org/fair-eo/id/dataset/> .
+@prefix ai4qc: <http://purl.org/ai4qc#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix feo: <http://w3id.org/fair-eo#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix it6: <http://data.europa.eu/it6/> .
+@prefix ns1: <http://www.w3.org/ns/dqv#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:bandon a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 2283 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "B1" ;
+            ns1:value "Red (600-700nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B3" ;
+            ns1:value "Blue (400-450nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B2" ;
+            ns1:value "Green (500-600nm)" ] ;
+    ai4qc:dataSource "Aerial" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "change" ;
+            dct:identifier 1 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "bandon-AItask" ] ;
+    ai4qc:image_size "2048 x 2048" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "bandon-labeler_4" ;
+                    foaf:name "Can Song" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "bandon-labeler_3" ;
+                    foaf:name "Jian Ding" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "bandon-labeler_5" ;
+                    foaf:name "Gui-Song Xia" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "bandon-labeler_1" ;
+                    foaf:name "Chao Pang" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "bandon-labeler_2" ;
+                    foaf:name "Jiang Wu" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "We adopted a semi-automatic labeling strategy for creating building change labels, i.e., an automatic candidate generation step followed by manual annotations." ] ;
+                    ai4qc:scope "Labeling of all pixels with one of the classes, the full scene is classified." ;
+                    ai4qc:tools "SenseTime API" ;
+                    dct:identifier "bandon-labeling-procedure" ] ;
+            dct:identifier "bandon-labeling" ] ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "MTGCD-Net" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.6027" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.7392" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.7521" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.7655" ] ;
+            dct:identifier "doi.org/10.48550/arXiv.2301.10922" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "Change-Mix" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.7080" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.5389" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.6929" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.7004" ] ;
+            dct:identifier "doi.org/10.48550/arXiv.2301.10922" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "The images are geo-located in six representative cities of China, i.e., Beijing, Shanghai, Wuhan, Shenzhen, HongKong and Jinan." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of testing image patches" ;
+            ns1:value "392" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "2283" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of change instances" ;
+            ns1:value "123000" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of training image patches" ;
+            ns1:value "1689" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of validation image patches" ;
+            ns1:value "202" ] ;
+    dct:created "2023-09-14" ;
+    dct:creator "SenseTime Research, Beijing",
+        "Wuhan University" ;
+    dct:description "The building change detection with off-nadir aerial images dataset (BANDON) was built to address the problem of accurate detection and localization of urban building changes from oblique drone images. The BANDON dataset contains 2283 pairs of images, 2283 change labels, 1891 BT-flows labels, 1891 pairs of segmentation labels, and 1891 pairs of ST-offsets labels (test sets do not provide auxiliary annotations)." ;
+    dct:identifier "bandon" ;
+    dct:license "Unknown" ;
+    dct:publisher "Wuhan University" ;
+    dct:title "Bandon dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://github.com/fitzpchao/BANDON" ] ;
+            ai4qc:representationTechnique [ ns1:value "PNG" ],
+                [ ns1:value "JPG" ],
+                [ ns1:value "TIFF" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is distributed in a zip file format. The archive contains train, validation and test folders. Images are available at times 1, 2 and 3, in jpg format. Corresponding building labels are available in png format. Change labels are available in 'labels_unch0ch1ig255' in png format. Other label files are in tiff format. Txt files contain the information of the change detection sample pairs." ;
+            dct:format [ ns1:value "zip" ] ;
+            dct:identifier "bandon-distribution" ;
+            dct:issued "2023-09-14" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "Unknown" ] ;
+            dct:title "BANDON distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://github.com/" ] ;
+                    ai4qc:subject [ ns1:value "change detection" ],
+                        [ ns1:value "building change" ] ;
+                    dct:created "2023-09-14" ;
+                    dct:creator "SenseTime Research, Beijing",
+                        "Wuhan University" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the BANDON dataset." ;
+                    dct:format [ ns1:value "zip" ] ;
+                    dct:identifier "bandon-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://arxiv.org/pdf/2301.10922" ] ;
+                    dct:license "Unkown" ;
+                    dct:title "BANDON data service" ;
+                    dcat:contactPoint [ ns1:value "Chao Pang" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://drive.google.com/drive/folders/1MTwbRLw76f_hThmELkLwKpfRQbkPH28P" ] ;
+                    dcat:keyword "building change",
+                        "change detection" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://github.com/fitzpchao/BANDON" ] ;
+            dcat:byteSize "4458389055" ;
+            dcat:downloadURL [ ns1:value "https://drive.google.com/drive/folders/1MTwbRLw76f_hThmELkLwKpfRQbkPH28P" ] ;
+            dcat:mediaType [ ns1:value "image/jpg" ],
+                [ ns1:value "image/tiff" ],
+                [ ns1:value "image/png" ] ;
+            dcat:packageFormat [ ns1:value "application/zip" ] ;
+            dcat:spatialResolutionInMeters 0.6 ;
+            odrl:hasPolicy [ ns1:value "Unknown" ] ] ;
+    dcat:keyword "building change",
+        "change detection" ;
+    dcat:version "V1" .
+
+:clcd a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 600 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "B1" ;
+            ns1:value "Red (600-700nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B3" ;
+            ns1:value "Blue (400-450nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B2" ;
+            ns1:value "Green (500-600nm)" ] ;
+    ai4qc:dataSource "Gaofen-2" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "change" ;
+            dct:identifier 1 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "clcd-AItask" ] ;
+    ai4qc:image_size "512 x 512" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "clcd-labeler_3" ;
+                    foaf:name "Haojun Deng" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "clcd-labeler_1" ;
+                    foaf:name "Mengxi Liu" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "clcd-labeler_2" ;
+                    foaf:name "Zhuoqun Chai" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "clcd-labeler_4" ;
+                    foaf:name "Rong Liu" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "Images were manually labeled." ] ;
+                    ai4qc:scope "Labeling of all pixels with one of the classes, the full scene is classified." ;
+                    dct:identifier "clcd-labeling-procedure" ] ;
+            dct:identifier "clcd-labeling" ] ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "MSCANet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.7536" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.5539" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.6764" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.7129" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3177235" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "MFPNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.6074" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.5411" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.8320" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.7022" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3177235" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "DSIFN" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.6379" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.7907" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.7061" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.5458" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3177235" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "The bi-temporal images in CLCD were collected in Guangdong Province, China, in 2017 and 2019, respectively." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of training image patches" ;
+            ns1:value "360" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of validation image patches" ;
+            ns1:value "120" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "600" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of testing image patches" ;
+            ns1:value "120" ] ;
+    dct:created "2022-05-23" ;
+    dct:creator "Guangdong Provincial Key Laboratory for Urbanization and Geo-simulation, Sun Yat-sen University" ;
+    dct:description "The CLCD dataset consists of 600 pairs image of cropland change samples. Each group of samples is composed of two images and a corresponding binary label of cropland change. The main types of change annotated in CLCD include buildings, roads, lakes and bare soil lands, etc." ;
+    dct:identifier "clcd" ;
+    dct:license "Unknown" ;
+    dct:publisher "Guangdong Provincial Key Laboratory for Urbanization and Geo-simulation, Sun Yat-sen University" ;
+    dct:title "CLCD dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://github.com/liumency/CropLand-CD" ] ;
+            ai4qc:representationTechnique [ ns1:value "PNG" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is distributed in a zip file format. Inside the archive are train, validation and test folders. Each contain images at time 1 and 2, as well as the corresponding label. All files are in PNG format." ;
+            dct:format [ ns1:value "zip" ] ;
+            dct:identifier "clcd-distribution" ;
+            dct:issued "2022-05-23" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "Unknown" ] ;
+            dct:title "CLCD distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://github.com/" ] ;
+                    ai4qc:subject [ ns1:value "change detection" ],
+                        [ ns1:value "cropland change" ] ;
+                    dct:created "2022-05-23" ;
+                    dct:creator "Guangdong Provincial Key Laboratory for Urbanization and Geo-simulation, Sun Yat-sen University" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the CLCD dataset." ;
+                    dct:format [ ns1:value "zip" ] ;
+                    dct:identifier "clcd-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://ieeexplore.ieee.org/document/9780164" ] ;
+                    dct:license "Unknown" ;
+                    dct:title "CLCD data service" ;
+                    dcat:contactPoint [ ns1:value "Mengxi Liu, liumx23@mail2.sysu.edu.cn" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://mail2sysueducn-my.sharepoint.com/personal/liumx23_mail2_sysu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fliumx23%5Fmail2%5Fsysu%5Fedu%5Fcn%2FDocuments%2FDataset%2FCLCD&ga=1" ] ;
+                    dcat:keyword "change detection",
+                        "cropland change" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://github.com/liumency/CropLand-CD" ] ;
+            dcat:byteSize "513173094" ;
+            dcat:downloadURL [ ns1:value "https://mail2sysueducn-my.sharepoint.com/personal/liumx23_mail2_sysu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fliumx23%5Fmail2%5Fsysu%5Fedu%5Fcn%2FDocuments%2FDataset%2FCLCD&ga=1" ] ;
+            dcat:mediaType [ ns1:value "image/png" ] ;
+            dcat:packageFormat [ ns1:value "application/zip" ] ;
+            dcat:spatialResolutionInMeters "0.5-2" ;
+            odrl:hasPolicy [ ns1:value "Unknown" ] ] ;
+    dcat:keyword "change detection",
+        "cropland change" ;
+    dcat:version "V1" .
+
+:dsifn a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 3988 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "B2" ;
+            ns1:value "Green (500-600nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B3" ;
+            ns1:value "Blue (400-450nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B1" ;
+            ns1:value "Red (600-700nm)" ] ;
+    ai4qc:dataSource "Google Earth" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "change" ;
+            dct:identifier 1 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "dsifn-AItask" ] ;
+    ai4qc:image_size "512 x 512" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "dsifn-labeler_5" ;
+                    foaf:name "Boyi Shangguan" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "dsifn-labeler_1" ;
+                    foaf:name "Chenxiao Zhang" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "dsifn-labeler_7" ;
+                    foaf:name "Guangchao Liu" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "dsifn-labeler_6" ;
+                    foaf:name "Li Huang" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "dsifn-labeler_4" ;
+                    foaf:name "Liangcun Jiang" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "dsifn-labeler_2" ;
+                    foaf:name "Peng Yue" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "dsifn-labeler_3" ;
+                    foaf:name "Deodato Tapete" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "Images were manually labeled." ] ;
+                    ai4qc:scope "Labeling of all pixels with change or no change, the full scene is classified." ;
+                    dct:identifier "dsifn-labeling-procedure" ] ;
+            dct:identifier "dsifn-labeling" ] ;
+    ai4qc:licenseLabel "Dataset specific" ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "IFN" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.9030" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.9496" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.8608" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "OA" ;
+                    ns1:value "0.9771" ] ;
+            dct:identifier "doi.org/10.1016/j.isprsjprs.2020.06.003" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "Unet++_MSOF" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.8954" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "OA" ;
+                    ns1:value "0.9673" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.8756" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.8711" ] ;
+            dct:identifier "doi.org/10.1016/j.isprsjprs.2020.06.003" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "FC-Siam-diff" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.8373" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.8364" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "OA" ;
+                    ns1:value "0.9575" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.8578" ] ;
+            dct:identifier "doi.org/10.1016/j.isprsjprs.2020.06.003" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "The images cover six cities, i.e., Beijing, Chengdu, Shenzhen, Chongqing, Wuhan and Xian in China." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of validation image patches" ;
+            ns1:value "340" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of testing image patches" ;
+            ns1:value "48" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "3988" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of training image patches" ;
+            ns1:value "3600" ] ;
+    dct:created "2020-09-12" ;
+    dct:creator "Collaborative Innovation Center of Geospatial Technology",
+        "Italian Space Agency (ASI)",
+        "Wuhan University" ;
+    dct:description "The DSIFN (Deeply Supervised Image Fusion Network) dataset consists of six large bi-temporal high resolution images clipped into 3988 patches. It is used for change detection." ;
+    dct:identifier "dsifn" ;
+    dct:license "https://github.com/GeoZcx/A-deeply-supervised-image-fusion-network-for-change-detection-in-remote-sensing-images/tree/master/dataset"^^xsd:anyURI ;
+    dct:publisher "Wuhan University" ;
+    dct:title "DSIFN dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://github.com/GeoZcx/A-deeply-supervised-image-fusion-network-for-change-detection-in-remote-sensing-images/tree/master/dataset" ] ;
+            ai4qc:representationTechnique [ ns1:value "PNG" ],
+                [ ns1:value "JPG" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is distributed in a zip file format. Inside the archive are train, validation and test folders containing images at times 1 and 2 (jpg format), as well as their corresponding label file (png format)." ;
+            dct:format [ ns1:value "zip" ] ;
+            dct:identifier "dsifn-distribution" ;
+            dct:issued "2020-09-12" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "The dataset is available for scientific research." ] ;
+            dct:title "DSIFN distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://github.com/" ] ;
+                    ai4qc:licenseLabel "Dataset specific" ;
+                    ai4qc:subject [ ns1:value "change detection" ] ;
+                    dct:created "2020-09-12" ;
+                    dct:creator "Collaborative Innovation Center of Geospatial Technology",
+                        "Italian Space Agency (ASI)",
+                        "Wuhan University" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the DSIFN dataset." ;
+                    dct:format [ ns1:value "zip" ] ;
+                    dct:identifier "dsifn-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://www.sciencedirect.com/science/article/abs/pii/S0924271620301532" ] ;
+                    dct:license "https://github.com/GeoZcx/A-deeply-supervised-image-fusion-network-for-change-detection-in-remote-sensing-images/tree/master/dataset"^^xsd:anyURI ;
+                    dct:title "DSIFN data service" ;
+                    dcat:contactPoint [ ns1:value "Peng Yue, pyue@whu.edu.cn" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://drive.google.com/drive/folders/1yutLU4WI7eeeGbuxilsq2OtGQr9EHDLy" ] ;
+                    dcat:keyword "Change detection" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://github.com/GeoZcx/A-deeply-supervised-image-fusion-network-for-change-detection-in-remote-sensing-images/tree/master/dataset" ] ;
+            dcat:byteSize "536164508" ;
+            dcat:downloadURL [ ns1:value "https://drive.google.com/drive/folders/1yutLU4WI7eeeGbuxilsq2OtGQr9EHDLy" ] ;
+            dcat:mediaType [ ns1:value "image/jpg" ],
+                [ ns1:value "image/png" ] ;
+            dcat:packageFormat [ ns1:value "application/zip" ] ;
+            odrl:hasPolicy [ ns1:value "The dataset may be used for scientific research purposes only." ] ] ;
+    dcat:keyword "Change detection" ;
+    dcat:version "V1" .
+
+:egybcd a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 6091 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "B2" ;
+            ns1:value "Green (500-600nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B3" ;
+            ns1:value "Blue (400-450nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B1" ;
+            ns1:value "Red (600-700nm)" ] ;
+    ai4qc:dataSource "Google Earth" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "building change" ;
+            dct:identifier 1 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "egy_bcd-AItask" ] ;
+    ai4qc:image_size "256 x 256" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "egy_bcd-labeler_4" ;
+                    foaf:name "Deren Li" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "egy_bcd-labeler_1" ;
+                    foaf:name "Shimaa Holail" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "egy_bcd-labeler_2" ;
+                    foaf:name "Tamer Saleh" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "egy_bcd-labeler_3" ;
+                    foaf:name "Xiongwu Xiao" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "The ground truth data was manually labeled for each pair of images into two categories: 'no-change' or 'change'." ] ;
+                    ai4qc:scope "Labeling of all pixels with one of the classes, the full scene is classified." ;
+                    dct:identifier "egy_bcd-labeling-procedure" ] ;
+            dct:identifier "egy_bcd-labeling" ] ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "SNUNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "cIoU" ;
+                    ns1:value "0.758" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.862" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "mIoU" ;
+                    ns1:value "0.833" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "OA" ;
+                    ns1:value "0.930" ] ;
+            dct:identifier "doi.org/10.1109/LGRS.2023.3283505" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "AFDE-Net" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.888" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "mIoU" ;
+                    ns1:value "0.866" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "OA" ;
+                    ns1:value "0.943" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "cIoU" ;
+                    ns1:value "0.796" ] ;
+            dct:identifier "doi.org/10.1109/LGRS.2023.3283505" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "Images are taken from 4 different regions located in Egypt, including New Mansoura, El Galala City, New Cairo, and New Thebes. The image data capture time varies from 2017 to 2022." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "6091" ] ;
+    dct:created "2023-06-07" ;
+    dct:creator "State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing (LIESMARS), Wuhan University" ;
+    dct:description "The EGY-BCD dataset contains high-resolution and multitemporal satellite images captured in four urban and coastal areas in Egypt to detect building changes." ;
+    dct:identifier "egy_bcd" ;
+    dct:license "Unknown" ;
+    dct:publisher "State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing (LIESMARS), Wuhan University" ;
+    dct:title "EGY-BCD dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://github.com/oshholail/EGY-BCD" ] ;
+            ai4qc:representationTechnique [ ns1:value "PNG" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is distributed in a zip file format. Images at time 1 are found in the 'A' folder, images at time 2 in 'B' and change masks in 'label'. All files are in PNG format." ;
+            dct:format [ ns1:value "zip" ] ;
+            dct:identifier "egy_bcd-distribution" ;
+            dct:issued "2023-06-07" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "Unknown" ] ;
+            dct:title "EGY-BCD distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://github.com/" ] ;
+                    ai4qc:subject [ ns1:value "change detection" ],
+                        [ ns1:value "building change" ] ;
+                    dct:created "2023-06-07" ;
+                    dct:creator "State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing (LIESMARS), Wuhan University" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the EGY-BCD dataset." ;
+                    dct:format [ ns1:value "zip" ] ;
+                    dct:identifier "egy_bcd-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://ieeexplore.ieee.org/document/10145434" ] ;
+                    dct:license "Unkown" ;
+                    dct:title "EGY-BCD data service" ;
+                    dcat:contactPoint [ ns1:value "Shimaa Holail, shimaaholail@whu.edu.cn" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://drive.google.com/file/d/16LLC1iSJQuFPrfuXCJSeSsEzKhXodhzp/view" ] ;
+                    dcat:keyword "building change",
+                        "change detection" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://github.com/oshholail/EGY-BCD" ] ;
+            dcat:byteSize "1136926376" ;
+            dcat:downloadURL [ ns1:value "https://drive.google.com/file/d/16LLC1iSJQuFPrfuXCJSeSsEzKhXodhzp/view" ] ;
+            dcat:mediaType [ ns1:value "image/png" ] ;
+            dcat:packageFormat [ ns1:value "application/zip" ] ;
+            dcat:spatialResolutionInMeters 0.25 ;
+            odrl:hasPolicy [ ns1:value "Unkown" ] ] ;
+    dcat:keyword "building change",
+        "change detection" ;
+    dcat:version "V1" .
+
+:levircdplus a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 985 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "B2" ;
+            ns1:value "Green (500-600nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B1" ;
+            ns1:value "Red (600-700nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B3" ;
+            ns1:value "Blue (400-450nm)" ] ;
+    ai4qc:dataSource "Google Earth" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "building change" ;
+            dct:identifier 1 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "levir_cd+-AItask" ] ;
+    ai4qc:image_size "1024 x 1024" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "levir_cd+-labeler_2" ;
+                    foaf:name "Zhenwei Shi" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "levir_cd+-labeler_1" ;
+                    foaf:name "Hao Chen" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "The bitemporal images were annotated by remote sensing image interpretation experts who are employed by an AI data service company." ] ;
+                    ai4qc:scope "Labeling of all pixels with change or no change, the full scene is classified." ;
+                    dct:identifier "levir_cd+-labeling-procedure" ] ;
+            dct:identifier "levir_cd+-labeling" ] ;
+    ai4qc:licenseLabel "CC0 1.0" ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "DSAMNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.6068" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.7218" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.8904" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.5647" ] ;
+            dct:identifier "https://doi.org/10.1016/j.jag.2024.103767" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "CDNeXt" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.8473" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.8968" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.7721" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.8714" ] ;
+            dct:identifier "https://doi.org/10.1016/j.jag.2024.103767" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "CDNeXt-Base" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.8880" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.8529" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.8204" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.7435" ] ;
+            dct:identifier "https://doi.org/10.1016/j.jag.2024.103767" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "Image pairs were collected between 2002 and 2018 accross 20 Texas regions." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "985" ] ;
+    dct:created "2021-12-27" ;
+    dct:creator "LEVIR Lab" ;
+    dct:description "LEVIR-CD+ is an extended version of the original LEVIR-CD dataset, designed for building change detection tasks in urban areas using remote sensing imagery." ;
+    dct:identifier "levir_cd+" ;
+    dct:license "https://creativecommons.org/publicdomain/zero/1.0/"^^xsd:anyURI ;
+    dct:publisher "LEVIR Lab" ;
+    dct:title "LEVIR-CD+ dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://github.com/S2Looking/Dataset/" ] ;
+            ai4qc:representationTechnique [ ns1:value "PNG" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is distributed in a zip file format. Inside the archive are train and test folders, each containing images at time A and B and the change label. All files are in png format." ;
+            dct:format [ ns1:value "zip" ] ;
+            dct:identifier "levir_cd+-distribution" ;
+            dct:issued "2021-12-27" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission." ] ;
+            dct:title "LEVIR-CD+ distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://github.com/" ] ;
+                    ai4qc:licenseLabel "CC0 1.0" ;
+                    ai4qc:subject [ ns1:value "urban change" ],
+                        [ ns1:value "change deteciton" ] ;
+                    dct:created "2021-12-27" ;
+                    dct:creator "LEVIR Lab" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the LEVIR-CD+ dataset." ;
+                    dct:format [ ns1:value "zip" ] ;
+                    dct:identifier "levir_cd+-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://www.kaggle.com/datasets/mdrifaturrahman33/levir-cd-change-detection" ] ;
+                    dct:license "https://creativecommons.org/publicdomain/zero/1.0/"^^xsd:anyURI ;
+                    dct:title "LEVIR-CD+ data service" ;
+                    dcat:contactPoint [ ns1:value "Zhenwei Shi, shizhenwei@buaa.edu.cn" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://drive.google.com/drive/folders/1lJ5GteQy5Z2LVayrKYZOn7_QPImlYP8C" ] ;
+                    dcat:keyword "Change detection",
+                        "Urban change",
+                        "Very high-resolution" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://github.com/S2Looking/Dataset/",
+                        "https://www.kaggle.com/datasets/mdrifaturrahman33/levir-cd-change-detection" ] ;
+            dcat:byteSize "3788765716" ;
+            dcat:downloadURL [ ns1:value "https://drive.google.com/drive/folders/1lJ5GteQy5Z2LVayrKYZOn7_QPImlYP8C" ] ;
+            dcat:mediaType [ ns1:value "image/png" ] ;
+            dcat:packageFormat [ ns1:value "application/zip" ] ;
+            dcat:spatialResolutionInMeters 0.5 ;
+            odrl:hasPolicy [ ns1:value "You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission." ] ] ;
+    dcat:keyword "Change detection",
+        "Urban change",
+        "Very high-resolution" ;
+    dcat:version "V1" .
+
+:msbc a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 3769 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "S1-B1" ;
+            ns1:value "VV" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B12" ;
+            ns1:value "2202.4nm (S2A)/2185.7nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "GF2-B1" ;
+            ns1:value "Red (600-700nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B3" ;
+            ns1:value "560nm (S2A)/559nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B4" ;
+            ns1:value "664.5nm (S2A)/665nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B2" ;
+            ns1:value "496.6nm (S2A)/492.1nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B11" ;
+            ns1:value "1613.7nm (S2A)/1610.4nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "GF2-B2" ;
+            ns1:value "Green (500-600nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "GF2-B3" ;
+            ns1:value "Blue (400-450nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S1-B2" ;
+            ns1:value "VH" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B8" ;
+            ns1:value "835.1nm (S2A)/833nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B8A" ;
+            ns1:value "864.8nm (S2A)/864nm (S2B)" ] ;
+    ai4qc:dataSource "GaoFen-2",
+        "Sentinel-1",
+        "Sentinel-2A" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "change" ;
+            dct:identifier 1 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "msbc-AItask" ] ;
+    ai4qc:image_size "256 x 256" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msbc-labeler_3" ;
+                    foaf:name "Xiaoyu Zheng" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msbc-labeler_5" ;
+                    foaf:name "Guangzhao Chen" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msbc-labeler_2" ;
+                    foaf:name "Fangjie Zhu" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msbc-labeler_4" ;
+                    foaf:name "Mengxi Liu" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msbc-labeler_1" ;
+                    foaf:name "Haoyang Li" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "Images were manually labeled." ] ;
+                    ai4qc:scope "Labeling of all pixels with one of the classes, the full scene is classified." ;
+                    dct:identifier "msbc-labeling-procedure" ] ;
+            dct:identifier "msbc-labeling" ] ;
+    ai4qc:licenseLabel "Dataset specific" ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "MSDCUNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.6577" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IOU" ;
+                    ns1:value "0.4900" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3181155" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "DSAMnet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.5745" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IOU" ;
+                    ns1:value "0.4487" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3181155" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "SNUNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IOU" ;
+                    ns1:value "0.4666" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.6087" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3181155" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "The study area of the MSBC dataset is located in Guigang City, China. Images were collected in January 2018 and January 2019." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of testing image patches" ;
+            ns1:value "526" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "3769" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of training image patches" ;
+            ns1:value "2079" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of validation image patches" ;
+            ns1:value "1164" ] ;
+    dct:created "2022-06-08" ;
+    dct:creator "Division of Landscape Architecture, University of Hong Kong",
+        "Guangdong Provincial Key Laboratory of Urbanization and Geo-Simulation, Sun Yat-sen University" ;
+    dct:description "The multisource built-up change (MSBC) dataset contains multispectral, SAR, and VHR multisource data for change detection." ;
+    dct:identifier "msbc" ;
+    dct:license "https://ieeexplore.ieee.org/document/9791854 - 'Both of the datasets be made openly available for all research needs'"^^xsd:anyURI ;
+    dct:publisher "Guangdong Provincial Key Laboratory of Urbanization and Geo-Simulation, Sun Yat-sen University" ;
+    dct:title "MSBC dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://github.com/Lihy256/MSCDUnet" ] ;
+            ai4qc:representationTechnique [ ns1:value "TIFF" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is distributed in a zip file format. Inside the archive are train and test folders. Each contain the SAR, optical and rgb images as well as the labels. All files are in tiff format." ;
+            dct:format [ ns1:value "zip" ] ;
+            dct:identifier "msbc-distribution" ;
+            dct:issued "2022-06-08" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "The dataset is made openly available for all research needs." ] ;
+            dct:title "MSBC distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://github.com/" ] ;
+                    ai4qc:licenseLabel "Dataset specific" ;
+                    ai4qc:subject [ ns1:value "multimodal imagery" ],
+                        [ ns1:value "change detection" ] ;
+                    dct:created "2022-06-08" ;
+                    dct:creator "Division of Landscape Architecture, University of Hong Kong",
+                        "Guangdong Provincial Key Laboratory of Urbanization and Geo-Simulation, Sun Yat-sen University" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the MSBC dataset." ;
+                    dct:format [ ns1:value "zip" ] ;
+                    dct:identifier "msbc-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://ieeexplore.ieee.org/document/9791854" ] ;
+                    dct:license "https://ieeexplore.ieee.org/document/9791854 - 'Both of the datasets be made openly available for all research needs'"^^xsd:anyURI ;
+                    dct:title "MSBC data service" ;
+                    dcat:contactPoint [ ns1:value "Haoyang Li, lihy256@mail2.sysu.edu.cn" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://drive.google.com/file/d/1iFp3jMFYwbk0iP4rN3hCIUwmnNxmDewz/view" ] ;
+                    dcat:keyword "change detection",
+                        "multisource imagery" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://github.com/Lihy256/MSCDUnet" ] ;
+            dcat:byteSize "4342272000" ;
+            dcat:downloadURL [ ns1:value "https://drive.google.com/file/d/1iFp3jMFYwbk0iP4rN3hCIUwmnNxmDewz/view" ] ;
+            dcat:mediaType [ ns1:value "image/tiff" ] ;
+            dcat:packageFormat [ ns1:value "application/zip" ] ;
+            dcat:spatialResolutionInMeters "2-60" ;
+            odrl:hasPolicy [ ns1:value "The dataset is made openly available for all research needs." ] ] ;
+    dcat:keyword "change detection",
+        "multisource imagery" ;
+    dcat:version "V1" .
+
+:msoscd a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 5107 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "S2-B8" ;
+            ns1:value "835.1nm (S2A)/833nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S1-B2" ;
+            ns1:value "VH" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B8A" ;
+            ns1:value "864.8nm (S2A)/864nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "GF2-B3" ;
+            ns1:value "Blue (400-450nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "GF2-B1" ;
+            ns1:value "Red (600-700nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S1-B1" ;
+            ns1:value "VV" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B12" ;
+            ns1:value "2202.4nm (S2A)/2185.7nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B4" ;
+            ns1:value "664.5nm (S2A)/665nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B3" ;
+            ns1:value "560nm (S2A)/559nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B11" ;
+            ns1:value "1613.7nm (S2A)/1610.4nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2-B2" ;
+            ns1:value "496.6nm (S2A)/492.1nm (S2B)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "GF2-B2" ;
+            ns1:value "Green (500-600nm)" ] ;
+    ai4qc:dataSource "GaoFen-2",
+        "Sentinel-1",
+        "Sentinel-2A" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "change" ;
+            dct:identifier 1 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "msoscd-AItask" ] ;
+    ai4qc:image_size "256 x 256" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msoscd-labeler_3" ;
+                    foaf:name "Xiaoyu Zheng" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msoscd-labeler_4" ;
+                    foaf:name "Mengxi Liu" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msoscd-labeler_1" ;
+                    foaf:name "Haoyang Li" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msoscd-labeler_5" ;
+                    foaf:name "Guangzhao Chen" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "msoscd-labeler_2" ;
+                    foaf:name "Fangjie Zhu" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "Images were manually labeled." ] ;
+                    ai4qc:scope "Labeling of all pixels with one of the classes, the full scene is classified." ;
+                    dct:identifier "msoscd-labeling-procedure" ] ;
+            dct:identifier "msoscd-labeling" ] ;
+    ai4qc:licenseLabel "Dataset specific" ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "MSDCUNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IOU" ;
+                    ns1:value "0.8705" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.931" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3181155" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "DSAMnet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IOU" ;
+                    ns1:value "0.7754" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.8889" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3181155" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "SNUNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IOU" ;
+                    ns1:value "0.7685" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.8753" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3181155" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "The authors selected eight cities from OSCD and collected the corresponding VHR and Sentinel-1 data. Images were collected between 2015 and 2018." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "5107" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of training image patches" ;
+            ns1:value "3805" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of testing image patches" ;
+            ns1:value "894" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of validation image patches" ;
+            ns1:value "408" ] ;
+    dct:created "2022-06-08" ;
+    dct:creator "Division of Landscape Architecture, University of Hong Kong",
+        "Guangdong Provincial Key Laboratory of Urbanization and Geo-Simulation, Sun Yat-sen University" ;
+    dct:description "The multisource OSCD (MSOSCD) dataset contains multispectral, SAR, and VHR multisource data for change detection. It is reformed from OSCD dataset." ;
+    dct:identifier "msoscd" ;
+    dct:license "https://ieeexplore.ieee.org/document/9791854 - 'Both of the datasets be made openly available for all research needs'"^^xsd:anyURI ;
+    dct:publisher "Guangdong Provincial Key Laboratory of Urbanization and Geo-Simulation, Sun Yat-sen University" ;
+    dct:title "MSOSCD dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://github.com/Lihy256/MSCDUnet" ] ;
+            ai4qc:representationTechnique [ ns1:value "TIFF" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is distributed in a zip file format. Inside the archive are train, validation and test folders. Each contain the SAR, optical and rgb images as well as the labels. All files are in tiff format." ;
+            dct:format [ ns1:value "zip" ] ;
+            dct:identifier "msoscd-distribution" ;
+            dct:issued "2022-06-08" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "The dataset is made openly available for all research needs." ] ;
+            dct:title "MSOSCD distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://github.com/" ] ;
+                    ai4qc:licenseLabel "Dataset specific" ;
+                    ai4qc:subject [ ns1:value "multimodal imagery" ],
+                        [ ns1:value "change detection" ] ;
+                    dct:created "2022-06-08" ;
+                    dct:creator "Division of Landscape Architecture, University of Hong Kong",
+                        "Guangdong Provincial Key Laboratory of Urbanization and Geo-Simulation, Sun Yat-sen University" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the MSOSCD dataset." ;
+                    dct:format [ ns1:value "zip" ] ;
+                    dct:identifier "msoscd-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://ieeexplore.ieee.org/document/9791854" ] ;
+                    dct:license "https://ieeexplore.ieee.org/document/9791854 - 'Both of the datasets be made openly available for all research needs'"^^xsd:anyURI ;
+                    dct:title "MSOSCD data service" ;
+                    dcat:contactPoint [ ns1:value "Haoyang Li, lihy256@mail2.sysu.edu.cn" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://drive.google.com/file/d/1iFp3jMFYwbk0iP4rN3hCIUwmnNxmDewz/view" ] ;
+                    dcat:keyword "change detection",
+                        "multisource imagery" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://github.com/Lihy256/MSCDUnet" ] ;
+            dcat:byteSize "2616254464" ;
+            dcat:downloadURL [ ns1:value "https://drive.google.com/file/d/1iFp3jMFYwbk0iP4rN3hCIUwmnNxmDewz/view" ] ;
+            dcat:mediaType [ ns1:value "image/tiff" ] ;
+            dcat:packageFormat [ ns1:value "application/zip" ] ;
+            dcat:spatialResolutionInMeters "2-60" ;
+            odrl:hasPolicy [ ns1:value "The dataset is made openly available for all research needs." ] ] ;
+    dcat:keyword "change detection",
+        "multisource imagery" ;
+    dcat:version "V1" .
+
+:ombria a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 694 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "S1 - B1" ;
+            ns1:value "VV" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2 - B11" ;
+            ns1:value "1.610 µm" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2 - B8" ;
+            ns1:value "0.842 µm" ],
+        [ a ai4qc:Band ;
+            rdfs:label "S2 - B3" ;
+            ns1:value "0.560 µm" ] ;
+    ai4qc:dataSource "Sentinel-1",
+        "Sentinel-2" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "flood" ;
+            dct:identifier 1 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "ombria-AItask" ] ;
+    ai4qc:image_size "256 x 256" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "ombria-labeler_2" ;
+                    foaf:name "Grigorios Tsagkatakis" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "ombria-labeler_1" ;
+                    foaf:name "Georgios I. Drakonakis" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "ombria-labeler_3" ;
+                    foaf:name "Konstantina Fotiadou" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "ombria-labeler_4" ;
+                    foaf:name "Panagiotis Tsakalides" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "Binary ground truth images of the flood regions were produced by the EMS Rapid mapping." ] ;
+                    ai4qc:scope "Labeling of all pixels with one of the classes, the full scene is classified." ;
+                    ai4qc:tools "EMS Rapid" ;
+                    dct:identifier "ombria-labeling-procedure" ] ;
+            dct:identifier "ombria-labeling" ] ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "Bitemporal OmbriaNet (Sentinel-2)" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "PA" ;
+                    ns1:value "0.8733" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "FW IoU" ;
+                    ns1:value "0.7919" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.6457" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3155559" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "Multimodal SVM" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "PA" ;
+                    ns1:value "0.8504" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "FW IoU" ;
+                    ns1:value "0.7631" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.6245" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3155559" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "Multimodal OmbriaNet (Sentinel-1 & Sentinel-2)" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.7236" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "FW IoU" ;
+                    ns1:value "0.8330" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "PA" ;
+                    ns1:value "0.9010" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3155559" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "U-Net (Sentinel-1)" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.5734" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "PA" ;
+                    ns1:value "0.7925" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "FW IoU" ;
+                    ns1:value "0.6971" ] ;
+            dct:identifier "doi.org/10.1109/JSTARS.2022.3155559" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "For the creation of the dataset, 20 flood event activations around the globe were picked between 2017 and 2020." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of testing image patches" ;
+            ns1:value "70" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "694" ],
+        [ a ai4qc:Statistic ;
+            rdfs:label "number of training image patches" ;
+            ns1:value "624" ] ;
+    dct:created "2021-06-11" ;
+    dct:creator "University of Crete" ;
+    dct:description "It is a Sentinel-1 and Sentinel-2 imagery dataset constructed for benchmarking the OmbriaNet deep learning CNN architecture. OmbriaNet was designed for adressing the flood mapping problem." ;
+    dct:identifier "ombria" ;
+    dct:license "Unknown" ;
+    dct:publisher "University of Crete" ;
+    dct:title "OMBRIA dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://github.com/geodrak/OMBRIA" ] ;
+            ai4qc:representationTechnique [ ns1:value "PNG" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is divided into S1 and S2 folders, each of which contain training and test folders. 'BEFORE' and 'AFTER' contain images of a region taken before and after a selected flood event. 'MASK' contains the binary masks. All files are in PNG format." ;
+            dct:format [ ns1:value "png" ] ;
+            dct:identifier "ombria-distribution" ;
+            dct:issued "2021-06-11" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "Unknwon" ] ;
+            dct:title "OMBRIA distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://github.com/" ] ;
+                    ai4qc:subject [ ns1:value "Sentinel imagery" ],
+                        [ ns1:value "flood detection" ] ;
+                    dct:created "2021-06-11" ;
+                    dct:creator "University of Crete" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the OMBRIA dataset." ;
+                    dct:identifier "ombria-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://ieeexplore.ieee.org/abstract/document/9723593" ] ;
+                    dct:license "Unknwon" ;
+                    dct:title "OMBRIA data service" ;
+                    dcat:contactPoint [ ns1:value "Georgios I. Drakonakis, drakonakis@ics.forth.gr" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://github.com/geodrak/OMBRIA" ] ;
+                    dcat:keyword "Change detection",
+                        "Flood event" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://github.com/geodrak/OMBRIA" ] ;
+            dcat:byteSize "197509374" ;
+            dcat:downloadURL [ ns1:value "https://github.com/geodrak/OMBRIA" ] ;
+            dcat:mediaType [ ns1:value "image/png" ] ;
+            dcat:spatialResolutionInMeters 10.0 ;
+            odrl:hasPolicy [ ns1:value "Unknwon" ] ] ;
+    dcat:keyword "Change detection",
+        "Flood event" ;
+    dcat:version "V1" .
+
+:seasonvaryingcdd a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 16000 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "B1" ;
+            ns1:value "Red (600-700nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B3" ;
+            ns1:value "Blue (400-450nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B2" ;
+            ns1:value "Green (500-600nm)" ] ;
+    ai4qc:dataSource "Google Earth" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "change" ;
+            dct:identifier 1 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "season_varying_cdd-AItask" ] ;
+    ai4qc:image_size "256 x 256" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "season_varying_cdd-labeler_1" ;
+                    foaf:name "M. A. Lebedev" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "season_varying_cdd-labeler_5" ;
+                    foaf:name "A. Yu. Rubis" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "season_varying_cdd-labeler_4" ;
+                    foaf:name "V. A. Knyaz" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "season_varying_cdd-labeler_3" ;
+                    foaf:name "O. V. Vygolov" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "season_varying_cdd-labeler_2" ;
+                    foaf:name "Yu. V. Vizilter" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "Ground truths were labeled manually using very high resolution imagery." ] ;
+                    ai4qc:scope "Labeling of all pixels with change or no change, the full scene is classified." ;
+                    dct:identifier "season_varying_cdd-labeling-procedure" ] ;
+            dct:identifier "season_varying_cdd-labeling" ] ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "MDNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.957" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.925" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1-score" ;
+                    ns1:value "0.961" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.965" ] ;
+            dct:identifier "doi.org/10.3390/rs15143482" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "GAN" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.91" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.87" ] ;
+            dct:identifier "doi.org/10.5194/isprs-archives-XLII-2-565-2018" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "SMCDNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1-score" ;
+                    ns1:value "0.953" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.946" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.910" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.960" ] ;
+            dct:identifier "doi.org/10.3390/rs15143482" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "The dataset contains season-varying remote sensing images of the same region." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "16000" ] ;
+    dct:created "2018-06-04" ;
+    dct:creator "State Res. Institute of Aviation Systems (GosNIIAS)" ;
+    dct:description "As a common dataset for change detection, the dataset contains three parts: the image before the change, the image after the change, and the label image showing the changed area. This dataset is characterized by significant seasonal differences between bi-temporal image pairs. The labels for this dataset include some irregular changes, such as the appearance and disappearance of cars; but do not include seasonal changes, such as changes in the ground surface caused by snowfall." ;
+    dct:identifier "season_varying_cdd" ;
+    dct:license "Unknown" ;
+    dct:publisher "State Res. Institute of Aviation Systems (GosNIIAS)" ;
+    dct:title "Season-varying Change Detection dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://drive.google.com/file/d/1GX656JqqOyBi_Ef0w65kDGVto-nHrNs9" ] ;
+            ai4qc:representationTechnique [ ns1:value "JPG" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is distributed in a zip file format. The 'real' folder contains the Season-varying Change Detection Dataset. It contains both the original dataset (11 images of varying sizes) as well as the modified dataset with 16000 images divided into train/val/test splits. Images at time 1, 2 and labels are in jpg format." ;
+            dct:format [ ns1:value "zip" ] ;
+            dct:identifier "season_varying_cdd-distribution" ;
+            dct:issued "2018-06-04" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "Unknown" ] ;
+            dct:title "Season-varying Change Detection distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://drive.google.com/drive/home" ] ;
+                    ai4qc:subject [ ns1:value "change detection" ],
+                        [ ns1:value "seasonal variation" ] ;
+                    dct:created "2018-06-04" ;
+                    dct:creator "State Res. Institute of Aviation Systems (GosNIIAS)" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the Season-varying Change Detection dataset." ;
+                    dct:format [ ns1:value "zip" ] ;
+                    dct:identifier "season_varying_cdd-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://isprs-archives.copernicus.org/articles/XLII-2/565/2018/isprs-archives-XLII-2-565-2018.pdf" ],
+                        [ ns1:value "https://www.mdpi.com/2072-4292/15/14/3482" ] ;
+                    dct:license "Unknown" ;
+                    dct:title "Season-varying Change Detection data service" ;
+                    dcat:contactPoint [ ns1:value "M. A. Lebedev, MLebedev@gosniias.ru" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://drive.google.com/file/d/1GX656JqqOyBi_Ef0w65kDGVto-nHrNs9" ] ;
+                    dcat:keyword "High-resolution imagery",
+                        "Seasonal change detection" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://drive.google.com/file/d/1GX656JqqOyBi_Ef0w65kDGVto-nHrNs9" ] ;
+            dcat:byteSize "5170860032" ;
+            dcat:downloadURL [ ns1:value "https://drive.google.com/file/d/1GX656JqqOyBi_Ef0w65kDGVto-nHrNs9" ] ;
+            dcat:mediaType [ ns1:value "image/jpg" ] ;
+            dcat:packageFormat [ ns1:value "application/zip" ] ;
+            dcat:spatialResolutionInMeters "0.03-1" ;
+            odrl:hasPolicy [ ns1:value "Unknown" ] ] ;
+    dcat:keyword "High-resolution imagery",
+        "Seasonal change detection" ;
+    dcat:version "V1" .
+
+:sysucd a ai4qc:AI_EOTrainingDataset ;
+    ai4qc:amountOfTrainingData 20000 ;
+    ai4qc:band [ a ai4qc:Band ;
+            rdfs:label "B3" ;
+            ns1:value "Blue (400-450nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B2" ;
+            ns1:value "Green (500-600nm)" ],
+        [ a ai4qc:Band ;
+            rdfs:label "B1" ;
+            ns1:value "Red (600-700nm)" ] ;
+    ai4qc:dataSource "Aerial" ;
+    ai4qc:has_class [ a ai4qc:AI_class ;
+            rdfs:label "change" ;
+            dct:identifier 1 ],
+        [ a ai4qc:AI_class ;
+            rdfs:label "no change" ;
+            dct:identifier 0 ] ;
+    ai4qc:has_task [ a ai4qc:AI_EOTask ;
+            it6:hasTaskType feo:ChangeDetection ;
+            ai4qc:taskType "change detection" ;
+            dct:description "Change detection with a segmentation mask assigned to a pair of images." ;
+            dct:identifier "sysu_cd-AItask" ] ;
+    ai4qc:image_size "256 x 256" ;
+    ai4qc:labeling [ a ai4qc:AI_Labeling ;
+            ai4qc:labeler [ a ai4qc:AI_Labeler ;
+                    dct:identifier "sysu_cd-labeler_6" ;
+                    foaf:name "Liangpei Zhang" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "sysu_cd-labeler_3" ;
+                    foaf:name "Shengchen Li" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "sysu_cd-labeler_4" ;
+                    foaf:name "Xiaoping Liu" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "sysu_cd-labeler_1" ;
+                    foaf:name "Qian Shi" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "sysu_cd-labeler_5" ;
+                    foaf:name "Fei Wang" ],
+                [ a ai4qc:AI_Labeler ;
+                    dct:identifier "sysu_cd-labeler_2" ;
+                    foaf:name "Mengxi Liu" ] ;
+            ai4qc:procedure [ a ai4qc:AI_LabelingProcedure ;
+                    ai4qc:method [ rdfs:label "labels" ;
+                            ai4qc:definition "Images were manually labeled." ] ;
+                    ai4qc:scope "Labeling of all pixels with one of the classes, the full scene is classified." ;
+                    dct:identifier "sysu_cd-labeling-procedure" ] ;
+            dct:identifier "sysu_cd-labeling" ] ;
+    ai4qc:metricsInLIT [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "STANet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.6309" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.7737" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.8533" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.7076" ] ;
+            dct:identifier "doi.org/10.1109/TGRS.2021.3085870" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "DSAMNet" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.7818" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.7481" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.6418" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.8186" ] ;
+            dct:identifier "doi.org/10.1109/TGRS.2021.3085870" ],
+        [ a ai4qc:AI_MetricsInLiterature ;
+            ai4qc:algorithm "FC-Siam-diff" ;
+            ai4qc:literature_metric [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Recall" ;
+                    ns1:value "0.6121" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "IoU" ;
+                    ns1:value "0.5696" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "Precision" ;
+                    ns1:value "0.8913" ],
+                [ a ai4qc:LiteratureMetric ;
+                    rdfs:label "F1" ;
+                    ns1:value "0.7257" ] ;
+            dct:identifier "doi.org/10.1109/TGRS.2021.3085870" ] ;
+    ai4qc:numberOfClasses 2 ;
+    ai4qc:scope "Images were taken between the years 2007 and 2014 in Hong Kong." ;
+    ai4qc:statisticsInfo [ a ai4qc:Statistic ;
+            rdfs:label "number of image patches" ;
+            ns1:value "20000" ] ;
+    dct:created "2021-06-22" ;
+    dct:creator "Guangdong Provincial Key Laboratory for Urbanization and Geo-Simulation, Sun Yat-sen University",
+        "State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing, Wuhan University",
+        "Xinjiang Common University Key Laboratory of Smart City and Environmental Stimulation" ;
+    dct:description "The dataset contains 20000 pairs of 0.5-m aerial images. The main types of changes in the dataset include: newly built urban buildings; suburban dilation; groundwork before construction; change of vegetation; road expansion; sea construction." ;
+    dct:identifier "sysu_cd" ;
+    dct:license "Unknown" ;
+    dct:publisher "Guangdong Provincial Key Laboratory for Urbanization and Geo-Simulation, Sun Yat-sen University" ;
+    dct:title "SYSU-CD dataset" ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcatap:availability [ ns1:value "available" ] ;
+            ai4qc:page [ ns1:value "https://github.com/liumency/SYSU-CD" ] ;
+            ai4qc:representationTechnique [ ns1:value "PNG" ] ;
+            ai4qc:status [ ns1:value "completed" ] ;
+            dct:description "The dataset is distributed in a zip file format. Inside the archive are train, validation and test folders. Each contain images at time 1 and 2, as well as label files. All files are in PNG format." ;
+            dct:format [ ns1:value "zip" ] ;
+            dct:identifier "sysu_cd-distribution" ;
+            dct:issued "2021-06-22" ;
+            dct:language [ ns1:value "English" ] ;
+            dct:rights [ a dct:RightsStatement ;
+                    ns1:value "Unknown" ] ;
+            dct:title "SYSU-CD distribution" ;
+            dcat:accessService [ a dcat:DataService ;
+                    ai4qc:accessRights [ a dct:RightsStatement ;
+                            ns1:value "open" ] ;
+                    ai4qc:landingPage [ ns1:value "https://github.com/" ] ;
+                    ai4qc:subject [ ns1:value "change detecion" ],
+                        [ ns1:value "aerial imagery" ] ;
+                    dct:created "2021-06-22" ;
+                    dct:creator "Guangdong Provincial Key Laboratory for Urbanization and Geo-Simulation, Sun Yat-sen University",
+                        "State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing, Wuhan University",
+                        "Xinjiang Common University Key Laboratory of Smart City and Environmental Stimulation" ;
+                    dct:description "The Data Service class provides a collection of operations that give access to the SYSU-CD dataset." ;
+                    dct:format [ ns1:value "zip" ] ;
+                    dct:identifier "sysu_cd-data-service" ;
+                    dct:isReferencedBy [ ns1:value "https://ieeexplore.ieee.org/document/9467555" ] ;
+                    dct:license "Unknown" ;
+                    dct:title "SYSU-CD data service" ;
+                    dcat:contactPoint [ ns1:value "Mengxi Liu, liumx23@mail2.sysu.edu.cn" ] ;
+                    dcat:endpointDescription [ ns1:value "The dataset can be downloaded via the end-point." ] ;
+                    dcat:endpointURL [ ns1:value "https://mail2sysueducn-my.sharepoint.com/personal/liumx23_mail2_sysu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fliumx23%5Fmail2%5Fsysu%5Fedu%5Fcn%2FDocuments%2FSYSU%2DCD&ga=1" ] ;
+                    dcat:keyword "change detection" ;
+                    dcat:theme [ ns1:value "Deep learning" ] ;
+                    dcat:version "V1" ] ;
+            dcat:accessURL [ ns1:value "https://github.com/liumency/SYSU-CD" ] ;
+            dcat:byteSize "5551245230" ;
+            dcat:downloadURL [ ns1:value "https://mail2sysueducn-my.sharepoint.com/personal/liumx23_mail2_sysu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fliumx23%5Fmail2%5Fsysu%5Fedu%5Fcn%2FDocuments%2FSYSU%2DCD&ga=1" ] ;
+            dcat:mediaType [ ns1:value "image/png" ] ;
+            dcat:packageFormat [ ns1:value "application/zip" ] ;
+            dcat:spatialResolutionInMeters 0.5 ;
+            odrl:hasPolicy [ ns1:value "Unknown" ] ] ;
+    dcat:keyword "change detection" ;
+    dcat:version "V1" .
+
