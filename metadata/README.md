@@ -6,7 +6,7 @@ The schema unifies four complementary vocabularies into a single, cross-referenc
 
 **Dataset layer — AI4QC.** Describes the training datasets themselves. The latter were semantically annotated using the [AI4QC ontology](https://github.com/biasvariancelabs/AI4QC). Each dataset is linked to a `dcat:Dataset`, connecting this layer to the standard DCAT data catalog vocabulary. Metadata fields include the EO task the datasets support, the spectral bands involved, class definitions, distribution format, any metrics reported for the dataset in the literature, etc. The complete metadata can be found in the [datasets.ttl](metadata/datasets.ttl) file.
 
-**Method layer — AiTLAS.** Describes the models and algorithms being benchmarked, using `feo:Method` as the anchor concept. This includes the model's architecture, model family, learning type (e.g. supervised, contrastive), and the input modality it accepts (e.g. RGB, SAR).
+**Method layer — AiTLAS.** Describes the models and algorithms being benchmarked, using `feo:Method` as the anchor concept. This includes the model's architecture, model family, learning type (e.g. supervised, contrastive), and the input modality it accepts (e.g. RGB, SAR). The metadata can be found in the [models.ttl](metadata/models.ttl) file. 
 
 **Experiment layer — MLDCAT-AP.** Sits at the center of the schema and ties everything together. A `Task` connects to a `Run`, which records the parameters, artifacts, and resource usage of a specific execution. Each run realizes an `ML Model` and has an associated `Flow`, capturing the parameters and dependencies of the experimental pipeline.
 
