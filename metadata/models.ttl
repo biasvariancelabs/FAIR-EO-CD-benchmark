@@ -61,15 +61,15 @@
     feo:supportsTaskType feo:ChangeDetection .
 
 :hrnet a feo:Method ;
-    rdfs:label "HRNet" ;
-    dct:title "HRNet" ;
+    rdfs:label "HRNet SiamConc" ;
+    dct:title "HRNet SiamConc" ;
     feo:availableInAiTLAS true ;
-    feo:availableInGitHub true ;
-    feo:availableInTimm true ;
+    feo:availableInGitHub false ;
+    feo:availableInTimm false ;
     feo:availableInTorchvision false ;
     feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/HRNet> ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:Segmentation .
+    feo:supportsTaskType feo:ChangeDetection .
 
 :siamcrnn a feo:Method ;
     rdfs:label "SiamCRNN" ;
