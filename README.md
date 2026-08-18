@@ -49,7 +49,7 @@ Model checkpoints and TensorBoard logs are available on [HuggingFace](https://hu
 | ChangeFormerV6 | [Bandara and Patel](https://doi.org/10.1109/IGARSS46834.2022.9883686) | 2022 | 41.03 | 138.77 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
 | ChangeViT | [Zhu et al.](https://doi.org/10.1016/j.patcog.2025.112539) | 2026 | 20.66 | 26.36 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
 | CSSM | [Ghazaei et a.](https://doi.org/10.1109/LGRS.2025.3629303) | 2025 | 2.59 | 2.78 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
-| HRNet | [Sun et al.](https://doi.org/10.1109/CVPR.2019.00584) | 2019 | 21.48 | 9.55 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
+| HRNet SiamConc | [Sun et al.](https://doi.org/10.1109/CVPR.2019.00584) | 2019 | 21.48 | 9.55 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
 | SiamCRNN | [Chen et al.](https://doi.org/10.1109/TGRS.2019.2956756) | 2020 | 28.51 | 65.49 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
 | STANet | [Chen and Shi](https://doi.org/10.3390/rs12101662) | 2020 | 12.21 | 19.15 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
 | TinyCD | [Codegoni et al.](https://doi.org/10.1007/s00521-022-08122-3) | 2023 | 0.29 | 1.46 | [Scratch](%23) • [Pre-trained](%23) | [Scratch](%23) • [Pre-trained](%23) |
