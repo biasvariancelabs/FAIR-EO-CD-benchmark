@@ -1,7 +1,9 @@
 ## Schema overview
 
-The schema used for semantic enrichment of the benchmarking framework can be seen below. (to possibly modify) 
-<img width="2400" height="2000" alt="00-full-structure" src="https://github.com/user-attachments/assets/32e5bea6-1cbb-4498-9026-5c97e2e0866e" />
+The schema used for semantic enrichment of the benchmarking framework can be seen below. 
+
+<img width="4419" height="3885" alt="fair-eo-core" src="https://github.com/user-attachments/assets/c7579137-c29e-4c00-a893-d3a94ddd5268" />
+
 The schema unifies four complementary vocabularies into a single, cross-referenced structure for describing benchmarking experiments end-to-end — from the datasets and methods used, through to how each run was executed and evaluated.
 
 **Dataset layer — AI4QC.** Describes the training datasets themselves. The latter were semantically annotated using the [AI4QC ontology](https://github.com/biasvariancelabs/AI4QC). Each dataset is linked to a `dcat:Dataset`, connecting this layer to the standard DCAT data catalog vocabulary. Metadata fields include the EO task the datasets support, the spectral bands involved, class definitions, distribution format, any metrics reported for the dataset in the literature, etc. The complete metadata can be found in the [datasets.ttl](datasets.ttl) file.
