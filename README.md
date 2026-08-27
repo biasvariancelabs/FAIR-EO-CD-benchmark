@@ -1,5 +1,5 @@
 <div align="center">
-<h2>Trustworthy benchmarking of methods for change detection in remote sensing</h2>
+<h2>A comprehensive and trustworthy benchmark of AI methods for change detection in Earth observation</h2>
 
 [**Tadej Tomanič**](mailto:tadej@bvlabs.ai)<sup>1, 2</sup> · **Alice Baudhuin**<sup>1</sup> · **Jan Sotošek**<sup>1</sup> · **Jure Brence**<sup>1, 3</sup> · **Panče Panov**<sup>1, 3</sup> · **Nikola Simidjievski**<sup>1, 4</sup> · **Dragi Kocev**<sup>1, 3</sup>
 
@@ -13,7 +13,7 @@
 
 ## Summary
 
-Code and experiments for the paper, *Trustworthy benchmarking of methods for change detection in remote sensing*, by Tadej Tomanič, Alice Baudhuin, Jan Sotošek, Jure Brence, Panče Panov, Nikola Simidjievski, and Dragi Kocev (currently under review).
+Code and experiments for the paper, *A comprehensive and trustworthy benchmark of AI methods for change detection in Earth observation*, by Tadej Tomanič, Alice Baudhuin, Jan Sotošek, Jure Brence, Panče Panov, Nikola Simidjievski, and Dragi Kocev (currently under review).
 
 This study presents a standardized benchmark for change detection in Earth Observation, developed as part of the OSCARS-funded [FAIR-EO](https://oscars-project.eu/projects/fair-eo-fair-open-and-ai-ready-earth-observation-resources) project. The framework is integrated into the [AiTLAS](https://github.com/biasvariancelabs/aitlas) toolbox.
 
