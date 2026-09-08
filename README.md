@@ -91,3 +91,16 @@ Mean Intersection over Union (mIoU) for models with pre-trained backbones.
 | **Average** | 0.7382 | 0.6638 | 0.7709 | 0.7657 | <int>0.7797</int> | 0.7112 | 0.7098 | **0.7931** | |
 
 ## Citation
+
+If you use this benchmark or code in your research, please cite our paper:
+
+```bibtex
+@misc{tomanič2026comprehensivetrustworthybenchmarkai,
+      title={A comprehensive and trustworthy benchmark of AI methods for change detection in Earth observation}, 
+      author={Tadej Tomanič and Alice Baudhuin and Jan Sotošek and Jure Brence and Panče Panov and Nikola Simidjievski and Dragi Kocev},
+      year={2026},
+      eprint={2608.28247},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={[https://arxiv.org/abs/2608.28247](https://arxiv.org/abs/2608.28247)}, 
+}

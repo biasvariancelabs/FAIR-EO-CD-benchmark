@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite our paper."
+title: "FAIR-EO-CD-benchmark"
+authors:
+  - family-names: "Tomanič"
+    given-names: "Tadej"
+  - family-names: "Baudhuin"
+    given-names: "Alice"
+  - family-names: "Sotošek"
+    given-names: "Jan"
+  - family-names: "Brence"
+    given-names: "Jure"
+  - family-names: "Panov"
+    given-names: "Panče"
+  - family-names: "Simidjievski"
+    given-names: "Nikola"
+  - family-names: "Kocev"
+    given-names: "Dragi"
+preferred-citation:
+  type: article
+  title: "A comprehensive and trustworthy benchmark of AI methods for change detection in Earth observation"
+  authors:
+    - family-names: "Tomanič"
+      given-names: "Tadej"
+    - family-names: "Baudhuin"
+      given-names: "Alice"
+    - family-names: "Sotošek"
+      given-names: "Jan"
+    - family-names: "Brence"
+      given-names: "Jure"
+    - family-names: "Panov"
+      given-names: "Panče"
+    - family-names: "Simidjievski"
+      given-names: "Nikola"
+    - family-names: "Kocev"
+      given-names: "Dragi"
+  year: 2026
+  url: "https://arxiv.org/abs/2608.28247"
+  identifiers:
+    - type: other
+      value: "arXiv:2608.28247"
+      description: "arXiv preprint"
