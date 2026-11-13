@@ -67,7 +67,7 @@ def main():
 
                         args = [
                             sys.executable,
-                            "/path/to/mlflow_run.py",  # Change this to the actual path of your mlflow_run.py script
+                            "/path/to/training_run.py",  # Change this to the actual path of your training_run.py script
                             "--dataset_class", dataset_class,
                             "--model_class", model_class,
                             "--batch_size", str(batch_size),
