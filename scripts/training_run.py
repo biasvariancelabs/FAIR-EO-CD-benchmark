@@ -40,18 +40,23 @@ def get_repo_commit():
     return f"{commit}-dirty" if dirty else commit
 
 def flatten_test_metrics(metrics):
+    # AiTLAS returns numbers, lists, numpy arrays or tensors, depending on the metric
     flat = {}
     for metric_dict in metrics:
         for name, value in metric_dict.items():
-            if isinstance(value, (int, float)):
-                flat[f"{name}/test"] = value
-            elif isinstance(value, (list, torch.Tensor)):
-                values = value if isinstance(value, list) else value.cpu().numpy()
-                if "per Class" in name:
-                    for i, v in enumerate(values):
-                        flat[f"{name}_class_{i}/test"] = float(v)
-                else:
-                    flat[f"{name}/test"] = float(torch.tensor(values).float().mean().item())
+            if isinstance(value, torch.Tensor):
+                value = value.detach().cpu().numpy()
+            try:
+                values = np.asarray(value, dtype=float)
+            except (TypeError, ValueError):
+                continue
+            if values.ndim == 0:
+                flat[f"{name}/test"] = float(values)
+            elif "per Class" in name:
+                for i, v in enumerate(values):
+                    flat[f"{name}_class_{i}/test"] = float(v)
+            else:
+                flat[f"{name}/test"] = float(values.mean())
     return flat
 
 def get_file_list_from_pattern(pattern):
@@ -135,7 +140,8 @@ def model_run(mlruns_directory, train_dataset, validation_dataset, test_dataset,
             "aitlas_version": importlib.metadata.version("aitlas"),
             "torch_version": torch.__version__,
             "cuda_version": str(torch.version.cuda),
-            "gpu": torch.cuda.get_device_name(device) if device.type == "cuda" else "cpu",
+            # model.device is where AiTLAS trains, the model itself is moved there only when training starts
+            "gpu": torch.cuda.get_device_name(model.device) if model.device.type == "cuda" else "cpu",
             "benchmark_commit": get_repo_commit(),
         })
 
