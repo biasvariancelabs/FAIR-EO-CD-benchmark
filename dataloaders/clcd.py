@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.patches import Patch
 
-from ..base import BaseDataset
+from aitlas.base import BaseDataset
 from .schemas import FAIREOSchema
-from ..utils import image_loader
+from aitlas.utils import image_loader
 
 
 """

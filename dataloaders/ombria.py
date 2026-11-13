@@ -7,9 +7,9 @@ import csv
 from matplotlib.patches import Patch
 from PIL import Image
 
-from ..base import BaseDataset
+from aitlas.base import BaseDataset
 from .schemas import OmbriaSchema
-from ..utils import image_loader
+from aitlas.utils import image_loader
 
 
 """

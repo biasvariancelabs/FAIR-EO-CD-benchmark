@@ -1,8 +1,8 @@
 import torch
 import numpy as np
 
-from ..base import BaseDataset
-from .schemas import SegmentationDatasetSchema
+from aitlas.base import BaseDataset
+from aitlas.datasets.schemas import SegmentationDatasetSchema
 
 """
 Generic dataset for the task of change detection
