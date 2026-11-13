@@ -6,7 +6,38 @@ from tensorboard.backend.event_processing import event_accumulator
 from fvcore.nn import FlopCountAnalysis
 from datetime import datetime
 import importlib
+import importlib.metadata
 import logging
+import random
+import subprocess
+import sys
+from pathlib import Path
+
+import numpy as np
+
+# The dataset loaders are in the dataloaders package at the root of this repository
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT))
+
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)  # seeds the CPU and all CUDA devices
+
+def get_repo_commit():
+    """Commit of this repository, with "-dirty" appended if tracked files have uncommitted changes."""
+    try:
+        commit = subprocess.run(
+            ["git", "-C", str(REPO_ROOT), "rev-parse", "HEAD"],
+            capture_output=True, text=True, check=True,
+        ).stdout.strip()
+        dirty = subprocess.run(
+            ["git", "-C", str(REPO_ROOT), "status", "--porcelain", "--untracked-files=no"],
+            capture_output=True, text=True, check=True,
+        ).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return "unknown"
+    return f"{commit}-dirty" if dirty else commit
 
 def flatten_test_metrics(metrics):
     flat = {}
@@ -63,7 +94,7 @@ def log_tensorboard_metrics_to_mlflow(event_file):
     else:
         print("Warning: No 'Loss/val' tag found in TensorBoard logs. Cannot determine best epoch.")
 
-def model_run(mlruns_directory, train_dataset, validation_dataset, test_dataset, dataset_config, epochs, temp_directory, model_config, run_name, dataset_name, model_class, task_name, model):
+def model_run(mlruns_directory, train_dataset, validation_dataset, test_dataset, dataset_config, epochs, temp_directory, model_config, run_name, dataset_name, model_class, task_name, model, seed):
     # Set MLflow tracking URI
     mlflow.set_tracking_uri(mlruns_directory)
     
@@ -88,7 +119,8 @@ def model_run(mlruns_directory, train_dataset, validation_dataset, test_dataset,
             "batch_size": dataset_config["batch_size"],
             "learning_rate": model_config["learning_rate"],
             "pretrained": model_config["pretrained"],
-            "num_workers": dataset_config["num_workers"]
+            "num_workers": dataset_config["num_workers"],
+            "seed": seed
         })
 
         model.prepare()
@@ -97,6 +129,15 @@ def model_run(mlruns_directory, train_dataset, validation_dataset, test_dataset,
         temp_model = model.model
         temp_model.eval()
         device = next(temp_model.parameters()).device
+
+        # Log the software and hardware setup of the run
+        mlflow.set_tags({
+            "aitlas_version": importlib.metadata.version("aitlas"),
+            "torch_version": torch.__version__,
+            "cuda_version": str(torch.version.cuda),
+            "gpu": torch.cuda.get_device_name(device) if device.type == "cuda" else "cpu",
+            "benchmark_commit": get_repo_commit(),
+        })
 
         # Create a synthetic input tensor with the same shape as the training data
         sample_tensor, _ = train_dataset[0]
@@ -154,11 +195,14 @@ def model_run(mlruns_directory, train_dataset, validation_dataset, test_dataset,
     # Remove the directory and all its contents
     shutil.rmtree(temp_directory)
 
-def prepare_run(dataset_class, model_class, batch_size, epochs, mlruns_directory, train_shuffle, val_shuffle, test_shuffle, num_workers, train_conf, validation_conf, test_conf, model_conf, learning_rate, pretrained, dataset_name, task_name, pretrained_name):
-    dataset_module = importlib.import_module("aitlas.datasets")
+def prepare_run(dataset_class, model_class, batch_size, epochs, mlruns_directory, train_shuffle, val_shuffle, test_shuffle, num_workers, train_conf, validation_conf, test_conf, model_conf, learning_rate, pretrained, dataset_name, task_name, pretrained_name, seed=1234):
+    dataset_module = importlib.import_module("dataloaders")
     dataset_cls = getattr(dataset_module, dataset_class)
     model_module = importlib.import_module("aitlas.models")
     model_cls = getattr(model_module, model_class)
+
+    # Set the seed after the imports, because importing aitlas.models calls torch.manual_seed(1234)
+    set_seed(seed)
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
     temp_directory = f"./temp_{timestamp}"
@@ -205,7 +249,7 @@ def prepare_run(dataset_class, model_class, batch_size, epochs, mlruns_directory
         training_type = pretrained_name[0]
     run_name = f"{task_name}_{dataset_name}_{training_type}_{model_class}"
     
-    model_run(mlruns_directory, train_dataset, validation_dataset, test_dataset, train_dataset_config, epochs, temp_directory, model_config, run_name, dataset_name, model_class, task_name, model)
+    model_run(mlruns_directory, train_dataset, validation_dataset, test_dataset, train_dataset_config, epochs, temp_directory, model_config, run_name, dataset_name, model_class, task_name, model, seed)
     logging.getLogger().handlers.clear()
 
 if __name__ == "__main__":
@@ -230,6 +274,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset_name")
     parser.add_argument("--task_name")
     parser.add_argument("--pretrained_name")
+    parser.add_argument("--seed", type=int, default=1234)
 
     args = parser.parse_args()
 
@@ -259,4 +304,5 @@ if __name__ == "__main__":
         args.dataset_name,
         args.task_name,
         pretrained_name,
+        seed=args.seed,
     )
