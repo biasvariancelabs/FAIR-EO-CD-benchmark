@@ -21,6 +21,18 @@ Despite rapid advancements in machine learning for remote sensing, accurately ev
 
 Aligned with the core principles of FAIR (Findable, Accessible, Interoperable, and Reusable) and open science, our framework provides a unified pipeline for the Earth Observation community. It establishes rigorous testing protocols, standardized evaluation metrics, and reproducible baselines.
 
+## Installation
+
+The experiments were run with Python 3.12 on Linux with an NVIDIA GPU. Clone the repository and install the pinned dependencies:
+
+```bash
+git clone https://github.com/biasvariancelabs/FAIR-EO-CD-benchmark.git
+cd FAIR-EO-CD-benchmark
+pip install -r requirements-lock.txt
+```
+
+`requirements-lock.txt` contains the exact versions of all packages used for the experiments in the paper. `requirements.txt` pins only AiTLAS and MLflow and lets pip choose the other versions.
+
 ## Datasets
 
 We do not host the datasets, but we provide links to original data sources, and our custom data splits and data loaders used in this study.
