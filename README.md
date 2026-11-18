@@ -35,7 +35,7 @@ pip install -r requirements-lock.txt
 
 ## Datasets
 
-We do not host the datasets, but we provide links to original data sources, and our custom data splits and data loaders used in this study.
+We do not host the datasets, but we provide links to original data sources, and our custom data splits and data loaders used in this study. Metadata for each dataset, including its license and provenance, are available in the [FAIR-EO Hub](https://eodata.bvlabs.ai/ai4eo/#/data).
 
 | Dataset | Paper | Year | Data source | Data splits | Dataloader |
 | --- | --- | --- | --- | --- | --- |
