@@ -15,3 +15,5 @@ The schema unifies four complementary vocabularies into a single, cross-referenc
 **Evaluation layer — FAIR-EO.** Captures the results of each run as an `EvaluationResult`, modeled as a `dqv:QualityMeasurement`. Each result specifies the measure used (e.g. F1, IoU, mAP), the data split it was computed on (train/val/test), the aggregation method (micro/macro), and the resulting numeric value.
 
 Together, these layers make it possible to trace a single evaluation result all the way back to the exact dataset, model configuration, and experimental run that produced it — supporting full reproducibility and structured comparison across the benchmark. The metadata of the runs can be found in the [runs.ttl](runs.ttl) file. 
+
+The FAIR-EO ontology is released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en) license. 
