@@ -75,8 +75,7 @@ def latex_results_table(df, metric, na):
 
 def latex_efficiency_table(df, profiling, na):
     prof = pd.read_csv(profiling).set_index("model")
-    lines = [r"\begin{table}[!htbp]", r"  \centering", r"  \caption{%s}" % (EFFICIENCY_CAPTION + NA_NOTE % na),
-             r"  \vspace{5pt}",
+    lines = [r"\begin{table}[!htbp]", r"  \centering", r"  \caption{%s}" % EFFICIENCY_CAPTION, r"  \vspace{5pt}",
              r"  \small", r"  \resizebox{\textwidth}{!}{%", r"  \begin{tabular}{|l|c|c|c|c|c|}", r"    \hline",
              r"    \textbf{Model} & \textbf{Activation} & \textbf{Latency} & \textbf{Throughput} & "
              r"\multicolumn{2}{c|}{\textbf{Average train time (h)}} \\",
