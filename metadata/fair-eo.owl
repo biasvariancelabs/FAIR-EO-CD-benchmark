@@ -725,7 +725,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <dct:title xml:lang="en">FAIR-EO ontology</dct:title>
     <dct:description xml:lang="en">An ontology-based schema for semantic annotation of FAIR, Open and AI-ready Earth Observation resources: datasets, ML models, pipelines (flows), runs and evaluation results. Extends MLDCAT-AP 2.0 with an EO-dataset layer and EO ML controlled vocabularies, and a reified evaluation-result layer for run metrics.</dct:description>
-    <owl:versionInfo>0.2.0-draft</owl:versionInfo>
+    <owl:versionInfo>1.0</owl:versionInfo>
     <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     <vann:preferredNamespacePrefix>feo</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri>http://w3id.org/fair-eo#</vann:preferredNamespaceUri>
