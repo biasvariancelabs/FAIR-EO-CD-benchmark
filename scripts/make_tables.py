@@ -34,6 +34,7 @@ EFFICIENCY_CAPTION = (
     r"for a training batch of size 16. Latency and throughput are measured on a single GPU with bi-temporal input "
     r"tensor of size $2 \times 3 \times 256 \times 256$ (batch size 1 for latency and 16 for throughput). Training "
     r"times represent the average wall-clock duration to reach convergence across all benchmark datasets.")
+NA_NOTE = " %s means that no weights pre-trained on ImageNet-1K are available for the model."
 
 
 def marks(values):
@@ -53,6 +54,7 @@ def cells(values, style, na):
 
 def latex_results_table(df, metric, na):
     caption, label = CAPTIONS[metric]
+    caption += NA_NOTE % na
     header = (r"    \textbf{Dataset} & " + " & ".join(r"\rotatebox{90}{\textbf{%s}}" % n for n in MODELS.values())
               + r" & \rotatebox{90}{\textbf{Average}} \\")
     lines = [r"\begin{table}[htbp]", r"    \centering", r"    \caption{%s}" % caption, r"    \vspace{5pt}",
@@ -73,7 +75,8 @@ def latex_results_table(df, metric, na):
 
 def latex_efficiency_table(df, profiling, na):
     prof = pd.read_csv(profiling).set_index("model")
-    lines = [r"\begin{table}[!htbp]", r"  \centering", r"  \caption{%s}" % EFFICIENCY_CAPTION, r"  \vspace{5pt}",
+    lines = [r"\begin{table}[!htbp]", r"  \centering", r"  \caption{%s}" % (EFFICIENCY_CAPTION + NA_NOTE % na),
+             r"  \vspace{5pt}",
              r"  \small", r"  \resizebox{\textwidth}{!}{%", r"  \begin{tabular}{|l|c|c|c|c|c|}", r"    \hline",
              r"    \textbf{Model} & \textbf{Activation} & \textbf{Latency} & \textbf{Throughput} & "
              r"\multicolumn{2}{c|}{\textbf{Average train time (h)}} \\",
@@ -112,7 +115,7 @@ def main():
     parser.add_argument("--runs", default="results/runs.csv")
     parser.add_argument("--profiling", help="profiling_results.csv from profile_models.py")
     parser.add_argument("--out", default="results/tables")
-    parser.add_argument("--na", default="/", help="cell text where a model has no pretrained weights")
+    parser.add_argument("--na", default="N/A", help="cell text where a model has no pretrained weights")
     args = parser.parse_args()
 
     df = load_runs(args.runs)
