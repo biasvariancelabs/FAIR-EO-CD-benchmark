@@ -12,9 +12,16 @@
     feo:availableInGitHub true ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
-    feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/ResNet> ;
+    feo:code "https://github.com/justchenhao/BIT_CD" ;
+    feo:github "Yes" ;
+    feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/ResNet_Transformer> ;
+    feo:inAiTLASBenchmarkArena false ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:paper "https://ieeexplore.ieee.org/document/9491802" ;
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
 
 :cgnet a feo:Method ;
     rdfs:label "CGNet" ;
@@ -23,9 +30,16 @@
     feo:availableInGitHub true ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
+    feo:code "https://github.com/ChengxiHAN/CGNet-CD" ;
+    feo:github "Yes" ;
     feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/VGG16> ;
+    feo:inAiTLASBenchmarkArena false ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:paper "https://ieeexplore.ieee.org/document/10234560" ;
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
 
 :changeformerv6 a feo:Method ;
     rdfs:label "ChangeFormerV6" ;
@@ -34,9 +48,16 @@
     feo:availableInGitHub true ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
-    feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/Transformer> ;
+    feo:code "https://github.com/wgcban/ChangeFormer" ;
+    feo:github "Yes" ;
+    feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/SegFormer> ;
+    feo:inAiTLASBenchmarkArena false ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:paper "https://ieeexplore.ieee.org/document/9883686" ;
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
 
 :changevit a feo:Method ;
     rdfs:label "ChangeViT" ;
@@ -45,9 +66,16 @@
     feo:availableInGitHub true ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
+    feo:code "https://github.com/zhuduowang/ChangeViT" ;
+    feo:github "Yes" ;
     feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/ViT> ;
+    feo:inAiTLASBenchmarkArena false ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:paper "https://arxiv.org/abs/2406.12847" ;
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
 
 :cssm a feo:Method ;
     rdfs:label "CSSM" ;
@@ -56,20 +84,32 @@
     feo:availableInGitHub true ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
-    feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/CNN> ;
+    feo:code "https://github.com/Elman295/CSSM" ;
+    feo:github "Yes" ;
+    feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/Mamba_SSM> ;
+    feo:inAiTLASBenchmarkArena false ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:paper "https://arxiv.org/html/2504.11080v1" ;
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
 
-:hrnet a feo:Method ;
+:hrnetsiamconc a feo:Method ;
     rdfs:label "HRNet SiamConc" ;
     dct:title "HRNet SiamConc" ;
     feo:availableInAiTLAS true ;
     feo:availableInGitHub false ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
+    feo:github "No" ;
     feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/HRNet> ;
+    feo:inAiTLASBenchmarkArena true ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
 
 :siamcrnn a feo:Method ;
     rdfs:label "SiamCRNN" ;
@@ -78,10 +118,16 @@
     feo:availableInGitHub true ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
-    feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/CNN>,
-        <http://w3id.org/fair-eo/vocab/architecture/RNN> ;
+    feo:code "https://github.com/ChenHongruixuan/SiamCRNN" ;
+    feo:github "Yes" ;
+    feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/CNN_RNN> ;
+    feo:inAiTLASBenchmarkArena false ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:paper "https://ieeexplore.ieee.org/document/8937755" ;
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
 
 :stanet a feo:Method ;
     rdfs:label "STANet" ;
@@ -90,9 +136,16 @@
     feo:availableInGitHub true ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
+    feo:code "https://github.com/justchenhao/STANet" ;
+    feo:github "Yes" ;
     feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/ResNet> ;
+    feo:inAiTLASBenchmarkArena false ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:paper "https://www.mdpi.com/2072-4292/12/10/1662" ;
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
 
 :tinycd a feo:Method ;
     rdfs:label "TinyCD" ;
@@ -101,9 +154,16 @@
     feo:availableInGitHub true ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
+    feo:code "https://github.com/AndreaCodegoni/Tiny_model_4_CD" ;
+    feo:github "Yes" ;
     feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/EfficientNet> ;
+    feo:inAiTLASBenchmarkArena false ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:paper "https://link.springer.com/article/10.1007/s00521-022-08122-3" ;
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
 
 :unetsiamconc a feo:Method ;
     rdfs:label "U-Net SiamConc" ;
@@ -112,9 +172,28 @@
     feo:availableInGitHub true ;
     feo:availableInTimm false ;
     feo:availableInTorchvision false ;
+    feo:code "https://github.com/likyoo/change_detection.pytorch" ;
+    feo:github "Yes" ;
     feo:hasArchitecture <http://w3id.org/fair-eo/vocab/architecture/U_Net> ;
+    feo:inAiTLASBenchmarkArena false ;
     feo:modelCategory feo:Traditional ;
-    feo:supportsTaskType feo:ChangeDetection .
+    feo:paper "https://ieeexplore.ieee.org/document/10438490" ;
+    feo:priority 6 ;
+    feo:supportsTaskType feo:ChangeDetection ;
+    feo:timm "No" ;
+    feo:torchvision "No" .
+
+<http://w3id.org/fair-eo/vocab/architecture/CNN_RNN> a feo:Architecture,
+        skos:Concept ;
+    skos:inScheme feo:ArchitectureScheme ;
+    skos:notation "CNN/RNN" ;
+    skos:prefLabel "CNN/RNN" .
+
+<http://w3id.org/fair-eo/vocab/architecture/EfficientNet> a feo:Architecture,
+        skos:Concept ;
+    skos:inScheme feo:ArchitectureScheme ;
+    skos:notation "EfficientNet" ;
+    skos:prefLabel "EfficientNet" .
 
 <http://w3id.org/fair-eo/vocab/architecture/HRNet> a feo:Architecture,
         skos:Concept ;
@@ -122,23 +201,35 @@
     skos:notation "HRNet" ;
     skos:prefLabel "HRNet" .
 
-<http://w3id.org/fair-eo/vocab/architecture/Transformer> a feo:Architecture,
+<http://w3id.org/fair-eo/vocab/architecture/Mamba_SSM> a feo:Architecture,
         skos:Concept ;
     skos:inScheme feo:ArchitectureScheme ;
-    skos:notation "Transformer" ;
-    skos:prefLabel "Transformer" .
+    skos:notation "Mamba (SSM)" ;
+    skos:prefLabel "Mamba (SSM)" .
 
-<http://w3id.org/fair-eo/vocab/architecture/RNN> a feo:Architecture,
+<http://w3id.org/fair-eo/vocab/architecture/ResNet> a feo:Architecture,
         skos:Concept ;
     skos:inScheme feo:ArchitectureScheme ;
-    skos:notation "RNN" ;
-    skos:prefLabel "RNN" .
+    skos:notation "ResNet" ;
+    skos:prefLabel "ResNet" .
 
-<http://w3id.org/fair-eo/vocab/architecture/EfficientNet> a feo:Architecture,
+<http://w3id.org/fair-eo/vocab/architecture/ResNet_Transformer> a feo:Architecture,
         skos:Concept ;
     skos:inScheme feo:ArchitectureScheme ;
-    skos:notation "EfficientNet" ;
-    skos:prefLabel "EfficientNet" .
+    skos:notation "ResNet/Transformer" ;
+    skos:prefLabel "ResNet/Transformer" .
+
+<http://w3id.org/fair-eo/vocab/architecture/SegFormer> a feo:Architecture,
+        skos:Concept ;
+    skos:inScheme feo:ArchitectureScheme ;
+    skos:notation "SegFormer" ;
+    skos:prefLabel "SegFormer" .
+
+<http://w3id.org/fair-eo/vocab/architecture/U_Net> a feo:Architecture,
+        skos:Concept ;
+    skos:inScheme feo:ArchitectureScheme ;
+    skos:notation "U-Net" ;
+    skos:prefLabel "U-Net" .
 
 <http://w3id.org/fair-eo/vocab/architecture/VGG16> a feo:Architecture,
         skos:Concept ;
@@ -152,20 +243,3 @@
     skos:notation "ViT" ;
     skos:prefLabel "ViT" .
 
-<http://w3id.org/fair-eo/vocab/architecture/CNN> a feo:Architecture,
-        skos:Concept ;
-    skos:inScheme feo:ArchitectureScheme ;
-    skos:notation "CNN" ;
-    skos:prefLabel "CNN" .
-
-<http://w3id.org/fair-eo/vocab/architecture/U_Net> a feo:Architecture,
-        skos:Concept ;
-    skos:inScheme feo:ArchitectureScheme ;
-    skos:notation "U-Net" ;
-    skos:prefLabel "U-Net" .
-
-<http://w3id.org/fair-eo/vocab/architecture/ResNet> a feo:Architecture,
-        skos:Concept ;
-    skos:inScheme feo:ArchitectureScheme ;
-    skos:notation "ResNet" ;
-    skos:prefLabel "ResNet" .
