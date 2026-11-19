@@ -1,0 +1,88 @@
+# FAIR-EO example SPARQL queries (run against schema + generated run instances)
+PREFIX feo:  <http://w3id.org/fair-eo#>
+PREFIX it6:  <http://data.europa.eu/it6/>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# 1) Leaderboard: macro-F1 on the test split, per model + dataset
+SELECT ?model ?dataset ?f1 WHERE {
+  ?run it6:realizes ?m ; feo:onDataset ?d ; feo:hasEvaluationResult ?er .
+  ?m feo:modelType ?model . ?d dct:title ?dataset .
+  ?er feo:hasMeasure feo:F1Score ; feo:hasAggregation feo:Macro ;
+      feo:onSplit feo:TestSplit ; feo:value ?f1 .
+} ORDER BY DESC(?f1)
+
+# 2) Object detection: mAP at IoU 0.50 on test
+# SELECT ?model ?v WHERE {
+#   ?run it6:realizes ?m ; feo:hasEvaluationResult ?er . ?m feo:modelType ?model .
+#   ?er feo:hasMeasure feo:MeanAveragePrecision ; feo:iouThreshold ?iou ;
+#       feo:onSplit feo:TestSplit ; feo:value ?v . FILTER(?iou = 0.5)
+# }
+
+# 3) Green-AI: cost vs quality (GFLOPs and run time next to accuracy)
+# SELECT ?model ?gflops ?seconds ?acc WHERE {
+#   ?run it6:realizes ?m ; feo:hasResourceEstimate ?r ; feo:hasEvaluationResult ?er .
+#   ?m feo:modelType ?model . ?r feo:gflops ?gflops . OPTIONAL { ?r feo:runTime ?seconds }
+#   ?er feo:hasMeasure feo:Accuracy ; feo:onSplit feo:TestSplit ; feo:value ?acc .
+# } ORDER BY ?gflops
+
+# 4) All runs for one task type, with their best-epoch checkpoint
+# SELECT ?run ?dataset ?epoch ?ckpt WHERE {
+#   ?run it6:hasTask [ it6:hasTaskType feo:SemanticSegmentation ] ;
+#        feo:onDataset [ dct:title ?dataset ] ; feo:bestEpoch ?epoch ;
+#        feo:hasArtifact ?a . ?a a feo:Checkpoint ; feo:artifactPath ?ckpt .
+# }
+
+# 5) Join runs to the method catalogue: macro-F1 on test, by architecture/backbone
+# SELECT ?arch ?model ?f1 WHERE {
+#   ?run it6:realizes ?m ; feo:hasEvaluationResult ?er .
+#   ?m feo:modelType ?model ; feo:basedOnMethod ?method .
+#   ?method feo:hasArchitecture [ skos:prefLabel ?arch ] .
+#   ?er feo:hasMeasure feo:F1Score ; feo:hasAggregation feo:Macro ;
+#       feo:onSplit feo:TestSplit ; feo:value ?f1 .
+# } ORDER BY DESC(?f1)
+
+# 6) Catalogue query: priority-1 classification methods available in AiTLAS
+# SELECT ?name WHERE {
+#   ?method a feo:Method ; dct:title ?name ; feo:priority 1 ;
+#           feo:availableInAiTLAS true ; feo:supportsTaskType feo:Classification .
+# } ORDER BY ?name
+
+# 7) Foundation models that use contrastive pre-training and ship weights
+# SELECT ?name ?family WHERE {
+#   ?method a feo:Method ; dct:title ?name ; feo:modelCategory feo:Foundation ;
+#           feo:pretrainedWeightsAvailable true ;
+#           feo:hasLearningType [ skos:prefLabel ?lt ] .
+#   OPTIONAL { ?method feo:hasModelFamily [ skos:prefLabel ?family ] }
+#   FILTER(CONTAINS(LCASE(?lt), "contrastive"))
+# }
+
+# 8) Full join: run metric + method architecture + dataset facts (AI4QC), one row
+# SELECT ?model ?arch ?dataset ?nclasses ?f1 WHERE {
+#   ?run it6:realizes ?m ; feo:onDataset ?d ; feo:hasEvaluationResult ?er .
+#   ?m feo:modelType ?model .
+#   OPTIONAL { ?m feo:basedOnMethod/feo:hasArchitecture/skos:prefLabel ?arch }
+#   OPTIONAL { ?d dct:title ?dataset } OPTIONAL { ?d ai4qc:numberOfClasses ?nclasses }
+#   ?er feo:hasMeasure feo:F1Score ; feo:hasAggregation feo:Macro ;
+#       feo:onSplit feo:TestSplit ; feo:value ?f1 .
+# } ORDER BY DESC(?f1)
+
+# 9) Datasets by spectral bands: how many bands each experiment dataset has
+# SELECT ?dataset (COUNT(?b) AS ?bands) WHERE {
+#   ?d a ai4qc:AI_EOTrainingDataset ; dct:title ?dataset ; ai4qc:band ?b .
+# } GROUP BY ?d ?dataset ORDER BY DESC(?bands)
+
+# NB: queries 8-9 need these PREFIXes in addition to those at the top:
+#   PREFIX ai4qc: <http://purl.org/ai4qc#>
+
+# 10) Cross-layer consistency: does each run's task type agree with the task type
+#     its dataset declares? (broader-aware, so coarse "Classification" matches
+#     fine "Multiclass classification" via skos:broader)
+# SELECT ?ds ?runTask ?dsTask ?consistent WHERE {
+#   ?run feo:onDataset ?d ; it6:hasTask/it6:hasTaskType ?rt .
+#   ?rt skos:prefLabel ?runTask . ?d rdfs:label ?ds .
+#   OPTIONAL { ?d ai4qc:has_task/it6:hasTaskType ?dt . ?dt skos:prefLabel ?dsTask }
+#   BIND(IF(!BOUND(?dt),"dataset not catalogued",
+#         IF(?rt=?dt || EXISTS{?rt skos:broader+ ?dt} || EXISTS{?dt skos:broader+ ?rt},
+#            "yes","MISMATCH")) AS ?consistent)
+# } ORDER BY ?ds
