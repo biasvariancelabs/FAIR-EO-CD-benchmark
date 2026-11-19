@@ -3,11 +3,14 @@ PREFIX feo:  <http://w3id.org/fair-eo#>
 PREFIX it6:  <http://data.europa.eu/it6/>
 PREFIX dct:  <http://purl.org/dc/terms/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX ai4qc: <https://purl.org/faireo#>
 
 # 1) Leaderboard: macro-F1 on the test split, per model + dataset
 SELECT ?model ?dataset ?f1 WHERE {
   ?run it6:realizes ?m ; feo:onDataset ?d ; feo:hasEvaluationResult ?er .
-  ?m feo:modelType ?model . ?d dct:title ?dataset .
+  ?m feo:modelType ?model . ?d owl:sameAs/dct:title ?dataset .
   ?er feo:hasMeasure feo:F1Score ; feo:hasAggregation feo:Macro ;
       feo:onSplit feo:TestSplit ; feo:value ?f1 .
 } ORDER BY DESC(?f1)
@@ -26,11 +29,10 @@ SELECT ?model ?dataset ?f1 WHERE {
 #   ?er feo:hasMeasure feo:Accuracy ; feo:onSplit feo:TestSplit ; feo:value ?acc .
 # } ORDER BY ?gflops
 
-# 4) All runs for one task type, with their best-epoch checkpoint
-# SELECT ?run ?dataset ?epoch ?ckpt WHERE {
+# 4) All runs for one task type, with their best epoch
+# SELECT ?run ?dataset ?epoch WHERE {
 #   ?run it6:hasTask [ it6:hasTaskType feo:SemanticSegmentation ] ;
-#        feo:onDataset [ dct:title ?dataset ] ; feo:bestEpoch ?epoch ;
-#        feo:hasArtifact ?a . ?a a feo:Checkpoint ; feo:artifactPath ?ckpt .
+#        feo:onDataset/owl:sameAs/dct:title ?dataset ; feo:bestEpoch ?epoch .
 # }
 
 # 5) Join runs to the method catalogue: macro-F1 on test, by architecture/backbone
@@ -62,7 +64,7 @@ SELECT ?model ?dataset ?f1 WHERE {
 #   ?run it6:realizes ?m ; feo:onDataset ?d ; feo:hasEvaluationResult ?er .
 #   ?m feo:modelType ?model .
 #   OPTIONAL { ?m feo:basedOnMethod/feo:hasArchitecture/skos:prefLabel ?arch }
-#   OPTIONAL { ?d dct:title ?dataset } OPTIONAL { ?d ai4qc:numberOfClasses ?nclasses }
+#   OPTIONAL { ?d owl:sameAs/dct:title ?dataset } OPTIONAL { ?d owl:sameAs/ai4qc:numberOfClasses ?nclasses }
 #   ?er feo:hasMeasure feo:F1Score ; feo:hasAggregation feo:Macro ;
 #       feo:onSplit feo:TestSplit ; feo:value ?f1 .
 # } ORDER BY DESC(?f1)
@@ -72,17 +74,15 @@ SELECT ?model ?dataset ?f1 WHERE {
 #   ?d a ai4qc:AI_EOTrainingDataset ; dct:title ?dataset ; ai4qc:band ?b .
 # } GROUP BY ?d ?dataset ORDER BY DESC(?bands)
 
-# NB: queries 8-9 need these PREFIXes in addition to those at the top:
-#   PREFIX ai4qc: <http://purl.org/ai4qc#>
-
 # 10) Cross-layer consistency: does each run's task type agree with the task type
-#     its dataset declares? (broader-aware, so coarse "Classification" matches
-#     fine "Multiclass classification" via skos:broader)
+#     its dataset declares? (the catalogue stores the task as text; a run task also
+#     matches when one of its broader concepts has the dataset's task as label)
 # SELECT ?ds ?runTask ?dsTask ?consistent WHERE {
 #   ?run feo:onDataset ?d ; it6:hasTask/it6:hasTaskType ?rt .
 #   ?rt skos:prefLabel ?runTask . ?d rdfs:label ?ds .
-#   OPTIONAL { ?d ai4qc:has_task/it6:hasTaskType ?dt . ?dt skos:prefLabel ?dsTask }
-#   BIND(IF(!BOUND(?dt),"dataset not catalogued",
-#         IF(?rt=?dt || EXISTS{?rt skos:broader+ ?dt} || EXISTS{?dt skos:broader+ ?rt},
+#   OPTIONAL { ?d owl:sameAs/ai4qc:has_task/ai4qc:taskType ?dsTask }
+#   BIND(LCASE(STR(?runTask)) AS ?r) BIND(LCASE(STR(?dsTask)) AS ?t)
+#   BIND(IF(!BOUND(?dsTask),"dataset not catalogued",
+#         IF(CONTAINS(?r, ?t) || CONTAINS(?t, ?r) || EXISTS{?rt skos:broader+/skos:prefLabel ?b . FILTER(LCASE(STR(?b)) = ?t)},
 #            "yes","MISMATCH")) AS ?consistent)
 # } ORDER BY ?ds
