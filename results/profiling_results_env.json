@@ -1,0 +1,47 @@
+{
+  "date_utc": "2026-11-18T12:57:35+00:00",
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "gpu_memory_gb": 42.4,
+  "nvidia_driver": "575.57.08",
+  "cpu": "AMD EPYC 7763 64-Core Processor",
+  "cpu_count": 256,
+  "ram_gb": 2151.6,
+  "python": "3.12.16",
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "cudnn": 91002,
+  "aitlas": "2.0.2",
+  "fvcore": "0.1.5.post20221221",
+  "segmentation_models_pytorch": "0.6.0",
+  "timm": "1.0.31",
+  "benchmark_commit": "7702267100d5b228306bd452649543cc20898fc1",
+  "cudnn_benchmark": false,
+  "tf32_matmul": false,
+  "tf32_cudnn": true,
+  "model_config": {
+    "num_classes": 2,
+    "threshold": 0.5,
+    "metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "f1_score",
+      "iou"
+    ]
+  },
+  "arguments": {
+    "models": null,
+    "device": "cuda:0",
+    "output": "profiling_results.csv",
+    "img_size": 256,
+    "batch_size": 16,
+    "learning_rate": 0.0001,
+    "latency_warmup": 50,
+    "latency_iters": 200,
+    "throughput_warmup": 10,
+    "throughput_iters": 50,
+    "train_warmup": 3,
+    "train_iters": 20,
+    "seed": 1234
+  }
+}
