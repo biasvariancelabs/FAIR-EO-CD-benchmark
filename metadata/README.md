@@ -6,7 +6,7 @@ The schema used for semantic enrichment of the benchmarking framework can be see
 
 The schema unifies four complementary vocabularies into a single, cross-referenced structure for describing benchmarking experiments end-to-end — from the datasets and methods used, through to how each run was executed and evaluated.
 
-**Dataset layer — AI4QC.** Describes the training datasets themselves. The latter were semantically annotated using the [AI4QC ontology](https://github.com/biasvariancelabs/AI4QC). Each dataset is linked to a `dcat:Dataset`, connecting this layer to the standard DCAT data catalog vocabulary. Metadata fields include the EO task the datasets support, the spectral bands involved, class definitions, distribution format, any metrics reported for the dataset in the literature, etc. The complete metadata can be found in the [datasets.ttl](datasets.ttl) file.
+**Dataset layer — AI4QC.** Describes the training datasets themselves. The latter were semantically annotated using the [AI4QC ontology](https://github.com/biasvariancelabs/AI4QC). The version of the ontology used here, with the namespace `https://purl.org/faireo#`, is in [ai4qc-ontology.rdf](ai4qc-ontology.rdf). Each dataset is linked to a `dcat:Dataset`, connecting this layer to the standard DCAT data catalog vocabulary. Metadata fields include the EO task the datasets support, the spectral bands involved, class definitions, distribution format, any metrics reported for the dataset in the literature, etc. The complete metadata can be found in the [datasets.ttl](datasets.ttl) file.
 
 **Method layer — AiTLAS.** Describes the models and algorithms being benchmarked, using `feo:Method` as the anchor concept. This includes the model's architecture, model type, and the task it supports. The metadata can be found in the [models.ttl](models.ttl) file. 
 
@@ -16,4 +16,4 @@ The schema unifies four complementary vocabularies into a single, cross-referenc
 
 Together, these layers make it possible to trace a single evaluation result all the way back to the exact dataset, model configuration, and experimental run that produced it — supporting full reproducibility and structured comparison across the benchmark. The metadata of the runs can be found in the [runs.ttl](runs.ttl) file. 
 
-The FAIR-EO ontology is released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en) license. 
+Both ontologies, [fair-eo.owl](fair-eo.owl) and [ai4qc-ontology.rdf](ai4qc-ontology.rdf), are released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en) license. 

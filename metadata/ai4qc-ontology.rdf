@@ -1,0 +1,1615 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alice/ontologies/2023/11/AI4QC#"
+     xml:base="http://www.semanticweb.org/alice/ontologies/2023/11/AI4QC"
+     xmlns:dqv="http://www.w3.org/ns/dqv#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pav="http://purl.org/pav/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:spdx="http://spdx.org/rdf/terms"
+     xmlns:ai4qc="https://purl.org/faireo#"
+     xmlns:dcatap="http://data.europa.eu/r5r/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:sdmx-attribute="http://purl.org/linked-data/sdmx/2009/attribute#">
+    <owl:Ontology rdf:about="https://purl.org/faireo">
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    </owl:Ontology>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // New Datatype Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- New Datatype Properties for Spatial Resolution Range -->
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#spatialResolutionInMeters_min">
+        <rdfs:label xml:lang="en">Spatial Resolution (min)</rdfs:label>
+        <rdfs:comment xml:lang="en">The minimum value for the spatial resolution in meters.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#spatialResolutionInMeters_max">
+        <rdfs:label xml:lang="en">Spatial Resolution (max)</rdfs:label>
+        <rdfs:comment xml:lang="en">The maximum value for the spatial resolution in meters.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- New Datatype Properties for Byte Size Range -->
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#byteSize_min">
+        <rdfs:label xml:lang="en">Byte Size (min)</rdfs:label>
+        <rdfs:comment xml:lang="en">The minimum value for the byte size.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#byteSize_max">
+        <rdfs:label xml:lang="en">Byte Size (max)</rdfs:label>
+        <rdfs:comment xml:lang="en">The maximum value for the byte size.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Redefine DCAT properties to use string ranges to hold original values -->
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Holds the original string for spatial resolution, which may be a range or inequality.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#byteSize">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Holds the original string for byte size, which may contain units or be a range.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/faireo#licenseLabel -->
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/faireo#licenseLabel"/>
+    
+
+
+    <!-- https://purl.org/faireo#name -->
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/faireo#name"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/relation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/relation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/pav/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/pav/hasVersion"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#definition"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#hasCurrentVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#hasCurrentVersion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/hasVersion"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#anySimpleType -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europa.eu/r5r/availability -->
+
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/r5r/availability">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment>An indication how long it is planned to keep the Distribution of the Dataset available.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#anomaly -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#anomaly">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/faireo#AI_EOTrainingData"/>
+                    <rdf:Description rdf:about="https://purl.org/faireo#AI_EOTrainingDataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://purl.org/faireo#EO_anomaly"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#band -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#band"/>
+    
+
+
+    <!-- https://purl.org/faireo#classes -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#classes"/>
+    
+
+
+    <!-- https://purl.org/faireo#data -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#data">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="https://purl.org/faireo#AI_TrainingData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#geometry -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#geometry"/>
+    
+
+
+    <!-- https://purl.org/faireo#has_class -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#has_class"/>
+    
+
+
+    <!-- https://purl.org/faireo#has_task -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#has_task">
+        <owl:inverseOf rdf:resource="https://purl.org/faireo#task"/>
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="https://purl.org/faireo#AI_Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#label -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#label">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingData"/>
+        <rdfs:range rdf:resource="https://purl.org/faireo#AI_AbstractLabel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#labeler -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#labeler">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_Labeling"/>
+        <rdfs:range rdf:resource="https://purl.org/faireo#AI_Labeler"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#labeling -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#labeling">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="https://purl.org/faireo#AI_Labeling"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#literature_metric -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#literature_metric"/>
+    
+
+
+    <!-- https://purl.org/faireo#method -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#method">
+        <rdfs:range rdf:resource="https://purl.org/faireo#Labeling_method"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#metric -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#metric">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#metricsInLIT -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#metricsInLIT"/>
+    
+
+
+    <!-- https://purl.org/faireo#object -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#object"/>
+    
+
+
+    <!-- https://purl.org/faireo#originates_from -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#originates_from">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#procedure -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#procedure">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_Labeling"/>
+        <rdfs:range rdf:resource="https://purl.org/faireo#AI_LabelingProcedure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#quality -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#quality">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingData"/>
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/faireo#statisticsInfo -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#statisticsInfo"/>
+    
+
+
+    <!-- https://purl.org/faireo#task -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/faireo#task">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_Task"/>
+        <rdfs:range rdf:resource="https://purl.org/faireo#AI_TrainingDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accessRights -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accessRights">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/conformsTo">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Standard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/format"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isReferencedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isReferencedBy">
+        <owl:inverseOf rdf:resource="http://purl.org/dc/terms/references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/references"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/rights">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/subject"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#representationTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#representationTechnique">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#status -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#status">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment>The status of the Asset in the context of a particular workflow process.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#accessService">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#accessURL">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessService"/>
+            <rdf:Description rdf:about="http://www.w3.org/ns/dcat#endpointURL"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>same as tds:dataURL</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#catalog -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#catalog">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#resource"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#compressFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#compressFormat">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#contactPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#contactPoint">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#dataset -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#dataset">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#resource"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#distribution -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#distribution">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#downloadURL">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#endpointDescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#endpointDescription">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#endpointURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#endpointURL">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#first -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#first"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#landingPage -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#landingPage">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#last -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#last"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#mediaType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#mediaType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#nextVersion -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#nextVersion">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/dcat#previousVersion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#packageFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#packageFormat">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#prev -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#prev"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#previousVersion -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#previousVersion"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#record -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#record">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#resource -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#resource">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#service -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#service">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#resource"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#theme -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#theme">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#themeTaxonomy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#themeTaxonomy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#hasQualityMeasurement -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#hasQualityMeasurement">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#inDimension -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#inDimension">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#isMeasurementOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#isMeasurementOf">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/hasPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/odrl/2/hasPolicy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#used -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#used">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#wasUsedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasUsedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasUsedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/page -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/page"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/faireo#algorithm -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#algorithm">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#amountOfTrainingData -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#amountOfTrainingData">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#area -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#area">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#bbox -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#bbox">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#bboxType -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#bboxType">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_ObjectLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:definition>Type of the bbox.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#classificationSchema -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#classificationSchema">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#confidance -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#confidance">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_AbstractLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:definition>Confidence score of the labeler.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#dataSource -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#dataSource">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#datatime -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#datatime">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#doi -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#doi">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#extent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#extent">
+        <rdfs:definition>Spatial extent of the EO training dataset.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#image_format -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#image_format">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_PixelLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:definition>Image data format.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#image_size -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#image_size">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_EOTrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#image_size_x -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#image_size_x">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#image_size_y -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#image_size_y">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#image_url -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#image_url">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_PixelLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:definition>URL of the images representing the label
+information.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#isNegative -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#isNegative">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_AbstractLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:definition>Whether the training sample related to the
+label is a positive or negative sample.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#iscrowd -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#iscrowd">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#numberOfClasses -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#numberOfClasses">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#numberOfLabels -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#numberOfLabels">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:definition>Total number of labels in the individual AI
+training sample.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#scope -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#scope">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#taskType -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#taskType">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#tools -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#tools">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/faireo#trainingType -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/faireo#trainingType">
+        <rdfs:domain rdf:resource="https://purl.org/faireo#AI_TrainingData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>e.g., &quot;training&quot;</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#versionNotes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/adms#versionNotes">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#byteSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#byteSize">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#keyword">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#spatialResolutionInMeters -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#temporalResolution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#temporalResolution">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#version">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#expectedDataType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dqv#expectedDataType">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dqv#value">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/faireo#AI_AbstractLabel -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_AbstractLabel">
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_EOTask -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_EOTask">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#AI_Task"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_EOTrainingData -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_EOTrainingData">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#AI_TrainingData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#datatime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#extent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_EOTrainingDataset -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_EOTrainingDataset">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#AI_TrainingDataset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#band"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/faireo#Band"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#extent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_Labeler -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_Labeler">
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_Labeling -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_Labeling">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#scope"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_LabelingProcedure -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_LabelingProcedure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#method"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/faireo#Labeling_method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#tools"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_MetricsInLiterature -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_MetricsInLiterature">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#literature_metric"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/faireo#LiteratureMetric"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#algorithm"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>should have doi, algorithm and metrics as data properties</rdfs:comment>
+        <rdfs:definition>AI_MetricsInLiterature records results of performance metrics achieved
+by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_ObjectLabel -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_ObjectLabel">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#AI_AbstractLabel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#has_class"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/faireo#AI_class"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#object"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/faireo#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#bboxType"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#datatime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_PixelLabel -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_PixelLabel">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#AI_AbstractLabel"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_SceneLabel -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_SceneLabel">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#AI_AbstractLabel"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_Task -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_Task">
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_TrainingData -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_TrainingData">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#dataSource"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_TrainingDataset -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_TrainingDataset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#has_class"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/faireo#AI_class"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#metricsInLIT"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/faireo#AI_MetricsInLiterature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#statisticsInfo"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/faireo#Statistic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#dataSource"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#scope"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#AI_class -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#AI_class">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#Band -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#Band">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#EO_anomaly -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#EO_anomaly"/>
+    
+
+
+    <!-- https://purl.org/faireo#Feature -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#Feature">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#area"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#iscrowd"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#Labeling_method -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#Labeling_method"/>
+    
+
+
+    <!-- https://purl.org/faireo#LiteratureMetric -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#LiteratureMetric">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#Polygon -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#Polygon">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/faireo#bbox"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#RFI_anomaly -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#RFI_anomaly">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#EO_anomaly"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#Statistic -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#Statistic">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#aerosol_anomaly -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#aerosol_anomaly">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#EO_anomaly"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#cloud_anomaly -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#cloud_anomaly">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#EO_anomaly"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/faireo#gosting_anomaly -->
+
+    <owl:Class rdf:about="https://purl.org/faireo#gosting_anomaly">
+        <rdfs:subClassOf rdf:resource="https://purl.org/faireo#EO_anomaly"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/LinguisticSystem -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LinguisticSystem"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/MediaType -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/MediaType"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/RightsStatement -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/RightsStatement"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Standard -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Standard"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Individual -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Individual">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Kind -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Kind">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Organization -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Catalog -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
+        <rdfs:label>dcat:Catalog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#CatalogRecord -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#DataService -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#DataService">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Resource -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Resource"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#Dimension -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#Dimension"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#Metric -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#Metric">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#QualityMeasurement -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#QualityMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#isMeasurementOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Asset -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Asset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Policy -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Policy"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

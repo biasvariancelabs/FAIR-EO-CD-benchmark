@@ -86,3 +86,14 @@ SELECT ?model ?dataset ?f1 WHERE {
 #         IF(CONTAINS(?r, ?t) || CONTAINS(?t, ?r) || EXISTS{?rt skos:broader+/skos:prefLabel ?b . FILTER(LCASE(STR(?b)) = ?t)},
 #            "yes","MISMATCH")) AS ?consistent)
 # } ORDER BY ?ds
+
+# 11) Change detection: mIoU of each model on the BANDON test split, with and without pre-training
+# SELECT ?model ?pretrained ?miou WHERE {
+#   ?run it6:hasTask/it6:hasSourceData ?d ;
+#        it6:realizes/feo:modelType ?model ;
+#        feo:pretrained ?pretrained ;
+#        feo:hasEvaluationResult ?res .
+#   ?d owl:sameAs/dct:title "Bandon dataset" .
+#   ?res feo:hasMeasure feo:IoU ; feo:hasAggregation feo:Mean ;
+#        feo:onSplit feo:TestSplit ; feo:value ?miou .
+# } ORDER BY DESC(?miou)
